@@ -80,7 +80,7 @@ Feature: probel_hastaKayit
     And user writes Passport Id
     And user writes Passport No
     And user selects a gender
-    And user chooses ilçe
+    And user chooses ilce
     And user enters the mobile phone
     And user clicks on the save button
     And user assert the registration
@@ -141,7 +141,7 @@ Feature: probel_hastaKayit
     Then user closes the application
 
   @TC0045
-  Scenario:TC0045 - The user registers a patient in the type "TİKA TARAFINDAN GETİRİLEN HASTALAR"
+  Scenario:TC0045 - The user registers a patient in the type "TIKA TARAFINDAN GETIRILEN HASTALAR"
     Given Enter Kurum, Kurum detay
     And user selects the Uyruk SURİYE
     And user click hasta Turu
@@ -163,7 +163,7 @@ Feature: probel_hastaKayit
     And user chooses a profession
     And user selects the learning
     And user selects the blood type
-    And user chooses ilçe Aliaga
+    And user chooses ilce Aliaga
     And user clik Email button
     And user click kimlik fotokopisi alindi button
     And user click KVKK button
@@ -201,7 +201,7 @@ Feature: probel_hastaKayit
     And user chooses a profession
     And user selects the learning
     And user selects the blood type
-    And user chooses ilçe Aliaga
+    And user chooses ilce Aliaga
     And user clik Email button
     And user click kimlik fotokopisi alindi button
     And user click KVKK button
@@ -240,7 +240,7 @@ Feature: probel_hastaKayit
     And user chooses a profession
     And user selects the learning
     And user selects the blood type
-    And user chooses ilçe Aliaga
+    And user chooses ilce Aliaga
     And user clik Email button
     And user click kimlik fotokopisi alindi button
     And user click KVKK button
@@ -278,7 +278,7 @@ Feature: probel_hastaKayit
     And user chooses a profession
     And user selects the learning
     And user selects the blood type
-    And user chooses ilçe Aliaga
+    And user chooses ilce Aliaga
     And user clik Email button
     And user click kimlik fotokopisi alindi button
     And user click KVKK button
