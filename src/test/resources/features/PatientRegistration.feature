@@ -372,7 +372,7 @@ Feature: probel_hastaKayit
     And user registration verifies
     Then user closes the application
 
-  @TC0064_D0025
+  @TC0064_D0025 @Bug
   Scenario: TC0064 - D0025 - There is no such country as Seysel
     Given Enter Kurum, Kurum detay
     And user selects the Uyruk as Seysel
@@ -396,7 +396,7 @@ Feature: probel_hastaKayit
     Then user closes the application
     Then user closes the application
 
-  @TC0064_D0026
+  @TC0064_D0026 @Bug
   Scenario:TR0064 - D0026 - In September 2018, Svaziland changed its name to Eswatini. Estawani not on the new list
     Given Enter Kurum, Kurum detay
     And user selects the Uyruk as Svaziland
@@ -420,7 +420,7 @@ Feature: probel_hastaKayit
     Then user closes the application
 
 
-  @TC0064_D0027
+  @TC0064_D0027 @Bug @Smoke
   Scenario:TR0064 - D0027 - The Tahsis No ve Karne Seri No required for Syrian refugees, but also for Germany and Argentina
     Given Enter Kurum, Kurum detay
     And user selects the Uyruk as Almanya
@@ -444,7 +444,7 @@ Feature: probel_hastaKayit
     Then user closes the application
     Then user closes the application
 
-  @TC0064_D0024
+  @TC0064_D0024 @Bug
   Scenario:TR0064 - D0024 - There is a meaningless country name in the country option under the Uyrugu
     Given Enter Kurum, Kurum detay
     And user selects the Uyruk as ??L?
@@ -468,7 +468,7 @@ Feature: probel_hastaKayit
     Then user closes the application
     Then user closes the application
 
-  @TC0065
+  @TC0065 @Bug
   Scenario:TR0065 - data entry according to Patient Type 13_17_99 by clicking yeni dogan checkbox
     Given Enter Kurum, Kurum detay
     And user selects the Uyruk as arnavutluk
@@ -489,14 +489,14 @@ Feature: probel_hastaKayit
     And user assert issue message
     Then user closes the application
 
-  @TC0069
+  @TC0069 @Bug
   Scenario: TR0069 - D0028 - There is more than one of the same options in the "Basvuru sekli" drop-down box
     Given Enter Kurum, Kurum detay
     And user click Basvuru sekli
     And user select Basvuru sekli
     And user assert that the options in the list are unique
 
-  @TR0073
+  @TR0073 @Bug
   Scenario: TR0073 - when you first click on the phone textbox and then enter the institution information, the process gives a successful message
     Given Enter Kurum, Kurum detay
     And user selects the Uyruk
