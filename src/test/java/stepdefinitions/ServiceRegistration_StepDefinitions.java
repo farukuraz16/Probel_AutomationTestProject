@@ -17,33 +17,25 @@ public class ServiceRegistration_StepDefinitions {
 
 
 
-    @And("Select Acil Erişkin Müşahade on Poliklinik on Muayene Kayıt Page")
-    public void selectAcilEriskinMusahadeOnPoliklinikOnMuayeneKayıtPage() {
-        mkp.emergencyAdult();
-    }
 
-    @Then("Bilgiler Kaydedildi shouldnt be seen on Popup Alert on Muayene Kayıt Page")
-    public void bilgilerKaydedildiShouldntBeSeenOnPopupAlertOnMuayeneKayıtPage() {
+
+    @Then("Bilgiler Kaydedildi shouldnt be seen on Popup Alert on Muayene Kayit Page")
+    public void bilgilerKaydedildiShouldntBeSeenOnPopupAlertOnMuayeneKayitPage() {
         mkp.failAlert();
     }
 
 
-    @When("Select  Poliklinik as KADIN DOĞUM on Muayene Kayıt Page")
-    public void selectPoliklinikAsKADINDOGUMOnMuayeneKayıtPage() {
+    @When("Select  Poliklinik as KADIN DOĞUM on Muayene Kayit Page")
+    public void selectPoliklinikAsKADINDOGUMOnMuayeneKayitPage() {
         mkp.selectPoliklinikAsKadinDogum();
     }
 
 
-    @Then("An alert should be seen on Muayene Kayıt Page")
-    public void anAlertShouldBeSeenOnMuayeneKayıtPage() {
+    @Then("An alert should be seen on Muayene Kayit Page")
+    public void anAlertShouldBeSeenOnMuayeneKayitPage() {
         mkp.alertSeen();
     }
 
-
-    @And("Bilgiler Kaydedildi alert should be seen on Popup Alert on Muayene Kayıt Page")
-    public void bilgilerKaydedildiAlertShouldBeSeenOnPopupAlertOnMuayeneKayıtPage() throws InterruptedException {
-        mkp.succesAlert();
-    }
 
     @And("Select a valid Poliklinik  from on Muayene Kayıt Page")
     public void selectAValidPoliklinikFromOnMuayeneKayıtPage() {
@@ -983,6 +975,30 @@ public class ServiceRegistration_StepDefinitions {
         mkp.insertTheSecondPatientNumberInPatientNumberBox();
     }
 
+    @And("Select a valid Poliklinik  from on Muayene Kayit Page")
+    public void selectAValidPoliklinikFromOnMuayeneKayitPage() {
+        mkp.selectValidPoliklinik();
+    }
+
+    @And("Select a valid Gelis Sekli  from on Muayene Kayit Page")
+    public void selectAValidGelisSekliFromOnMuayeneKayitPage() {
+        mkp.selectAValidArrivalType();
+    }
+
+    @And("Click Kaydet button from on Muayene Kayit Page")
+    public void clickKaydetButtonFromOnMuayeneKayitPage() {
+        mkp.clickSaveButton();
+    }
+
+    @And("Bilgiler Kaydedildi alert should be seen on Popup Alert on Muayene Kayit Page")
+    public void bilgilerKaydedildiAlertShouldBeSeenOnPopupAlertOnMuayeneKayitPage() throws InterruptedException {
+        mkp.succesAlert();
+    }
+
+    @And("Select Acil Eriskin Musahade on Poliklinik on Muayene Kayit Page")
+    public void selectAcilEriskinMusahadeOnPoliklinikOnMuayeneKayitPage() {
+        mkp.emergencyAdult();
+    }
     //@When("The user can click hasta button")
    //public void theUserCanClickHastaButton() {
    //    // bp.hastaButton.click();
