@@ -471,7 +471,8 @@ public class ServiceRegistration_Page {
     }
 
     public void assertTCID() {
-        System.out.println("tcIdNo_box.getAttribute(value) = " + tcIdNo_box.getAttribute("value"));
+        System.out.println("actual tcId = " + tcIdNo_box.getAttribute("value"));
+        System.out.println("expected tcId = " + tcID);
         Assert.assertEquals(tcIdNo_box.getAttribute("value"), tcID);
     }
 
@@ -482,6 +483,7 @@ public class ServiceRegistration_Page {
 
     public void clickClean() {
         ReusableMethods.jseWithClick(Driver.getDriver(), clean_button);
+        ReusableMethods.waitFor(1);
 
     }
 
@@ -490,7 +492,9 @@ public class ServiceRegistration_Page {
     }
 
     public void clickQuery() {
-        query_button.click();
+        ReusableMethods.jseWithClick(Driver.getDriver(),query_button);
+        //query_button.click();
+        ReusableMethods.waitFor(1);
     }
 
     public void clickEnter() {
@@ -502,6 +506,8 @@ public class ServiceRegistration_Page {
     }
 
     public void assertProtocolNo() {
+        System.out.println("Actual ProtocolNumber = " + assertProtocolNumber.getText());
+        System.out.println("Expected ProtocolNumber = " + protocolNo);
         Assert.assertEquals(assertProtocolNumber.getText(), protocolNo);
     }
 
@@ -732,8 +738,9 @@ public class ServiceRegistration_Page {
         Assert.assertTrue(popUpPage_Title.getText().contains(serviceRecordPopupTitle));
     }
 
-    public void assertTheNewRecordInServiceSList() {
-        String serviceName = "FİZİK TEDAVİ.1";
+    public void assertTheNewRecordInServiceSList(String serviceName) {
+        System.out.println("actual service = " + firstServiceInServiceList.getText());
+        System.out.println("expected service = " + serviceName);
         Assert.assertEquals(firstServiceInServiceList.getText(), serviceName);
     }
 
@@ -1274,6 +1281,7 @@ public class ServiceRegistration_Page {
             }
         } catch (NoSuchElementException e) {
         }
+    ReusableMethods.waitFor(2);
     }
 
     public void insertTheSecondTCIdentityNumberInTCIDBox() {
@@ -1289,5 +1297,25 @@ public class ServiceRegistration_Page {
     public void insertTheSecondPatientNumberInPatientNumberBox() {
         patientNumber_box.sendKeys(patientNo);
 
+    }
+
+    public void selectNewService(String arg0) {
+        serviceID_box.clear();
+        serviceID_box.sendKeys(arg0 + Keys.ENTER);
+        ReusableMethods.waitFor(1);
+
+    }
+
+    public void selectTheAssistant(String arg0) {
+        assistant_box.clear();
+        assistant_box.sendKeys(arg0 + Keys.ENTER);
+        ReusableMethods.waitFor(1);
+
+    }
+
+    public void selectTheCgrTipiNo(String arg0) {
+        cgrTipiNo_box.clear();
+        cgrTipiNo_box.sendKeys(arg0 + Keys.ENTER);
+        ReusableMethods.waitFor(1);
     }
 }
