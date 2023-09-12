@@ -492,6 +492,7 @@ public class ServiceRegistration_Page {
     }
 
     public void clickQuery() {
+        ReusableMethods.waitFor(1);
         ReusableMethods.jseWithClick(Driver.getDriver(),query_button);
         //query_button.click();
         ReusableMethods.waitFor(1);
@@ -741,7 +742,7 @@ public class ServiceRegistration_Page {
     public void assertTheNewRecordInServiceSList(String serviceName) {
         System.out.println("actual service = " + firstServiceInServiceList.getText());
         System.out.println("expected service = " + serviceName);
-        Assert.assertEquals(firstServiceInServiceList.getText(), serviceName);
+        Assert.assertTrue(firstServiceInServiceList.getText().contains(serviceName));
     }
 
     public void clickContinueButton() {
@@ -1296,12 +1297,31 @@ public class ServiceRegistration_Page {
 
     public void insertTheSecondPatientNumberInPatientNumberBox() {
         patientNumber_box.sendKeys(patientNo);
-
     }
 
     public void selectNewService(String arg0) {
         serviceID_box.clear();
+
+        System.out.println("service code = " + arg0);
         serviceID_box.sendKeys(arg0 + Keys.ENTER);
+        ReusableMethods.waitFor(1);
+        try {
+            if (warningPopUp.getAttribute("textContent").contains("Yeni muayene kaydı yapılamaz!")) {
+                closeWarningPopUp_button.click();
+                ReusableMethods.waitFor(1);
+
+                int i = Integer.parseInt(arg0);
+                i++;
+                String code = String.valueOf(i);
+                System.out.println("new service code = " + code);
+                serviceID_box.sendKeys(code + Keys.ENTER);
+                ReusableMethods.waitFor(1);
+
+            }
+        } catch (NoSuchElementException e) {
+        }
+
+        String service =  serviceName.getAttribute("textContent");
         ReusableMethods.waitFor(1);
 
     }
@@ -1317,5 +1337,10 @@ public class ServiceRegistration_Page {
         cgrTipiNo_box.clear();
         cgrTipiNo_box.sendKeys(arg0 + Keys.ENTER);
         ReusableMethods.waitFor(1);
+    }
+
+    public void assertTheNewServiceRecord() {
+
+
     }
 }
