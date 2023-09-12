@@ -232,14 +232,14 @@ Feature: The Home Page of Service Register
     And press enter
     And continue if
     And click the check box of HstTer
-    And double click on service ID box
-    And select service
-    And double click the doctor ID box
-    And select the first doctor
-    And double click on assistant ID box
-    And select the first assistant
-    And double click CgrTipiNo box
-    And select the control
+    #And double click on service ID box
+    And select new service "180"
+    #And double click the doctor ID box
+    #And select the first doctor
+    #And double click on assistant ID box
+    And select the assistant "777"
+    #And double click CgrTipiNo box
+    And select the CgrTipiNo "16"
     And insert the description "abeyis automation test"
     And click save button
     And assert the saved message
@@ -251,7 +251,7 @@ Feature: The Home Page of Service Register
     And continue if
     #And assert record popup page
     #And click continue button
-    Then assert the new record in service's list
+    Then assert the new record in service's list "PSİKİYATRİ POL.2"
 
   @TC0087
   Scenario: The user can display and update additional information about patient

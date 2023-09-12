@@ -359,9 +359,9 @@ public class ServiceRegistration_StepDefinitions {
         mkp.assertRecordPopupPage();
     }
 
-    @Then("assert the new record in service's list")
-    public void assertTheNewRecordInServiceSList() {
-        mkp.assertTheNewRecordInServiceSList();
+    @Then("assert the new record in service's list {string}")
+    public void assertTheNewRecordInServiceSList(String arg0) {
+        mkp.assertTheNewRecordInServiceSList(arg0);
     }
 
     @And("click continue button")
@@ -999,6 +999,23 @@ public class ServiceRegistration_StepDefinitions {
     public void selectAcilEriskinMusahadeOnPoliklinikOnMuayeneKayitPage() {
         mkp.emergencyAdult();
     }
+
+    @And("select new service {string}")
+    public void selectNewService(String arg0) {
+        mkp.selectNewService(arg0);
+    }
+
+    @And("select the assistant {string}")
+    public void selectTheAssistant(String arg0) {
+        mkp.selectTheAssistant(arg0);
+    }
+
+    @And("select the CgrTipiNo {string}")
+    public void selectTheCgrTipiNo(String arg0) {
+        mkp.selectTheCgrTipiNo(arg0);
+    }
+
+
     //@When("The user can click hasta button")
    //public void theUserCanClickHastaButton() {
    //    // bp.hastaButton.click();
