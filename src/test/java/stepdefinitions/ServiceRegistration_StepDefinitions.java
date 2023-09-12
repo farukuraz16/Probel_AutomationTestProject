@@ -1015,6 +1015,11 @@ public class ServiceRegistration_StepDefinitions {
         mkp.selectTheCgrTipiNo(arg0);
     }
 
+    @Then("assert the new service record")
+    public void assertTheNewServiceRecord() {
+        mkp.assertTheNewServiceRecord();
+    }
+
 
     //@When("The user can click hasta button")
    //public void theUserCanClickHastaButton() {

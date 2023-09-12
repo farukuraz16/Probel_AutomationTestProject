@@ -232,13 +232,8 @@ Feature: The Home Page of Service Register
     And press enter
     And continue if
     And click the check box of HstTer
-    #And double click on service ID box
-    And select new service "180"
-    #And double click the doctor ID box
-    #And select the first doctor
-    #And double click on assistant ID box
+    And select new service "114"
     And select the assistant "777"
-    #And double click CgrTipiNo box
     And select the CgrTipiNo "16"
     And insert the description "abeyis automation test"
     And click save button
@@ -249,9 +244,7 @@ Feature: The Home Page of Service Register
     And insert the TC Identity Number in TC ID box for service
     And press enter
     And continue if
-    #And assert record popup page
-    #And click continue button
-    Then assert the new record in service's list "PSİKİYATRİ POL.2"
+    Then assert the new record in service's list "DAHİLİYE."
 
   @TC0087
   Scenario: The user can display and update additional information about patient
