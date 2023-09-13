@@ -90,7 +90,7 @@ Feature: The Home Page of Service Register
 
   @TC0029 @Bug
   Scenario: The user can print the patient's information out by click on “print" button
-    When insert the second TC Identity Number in TC ID box
+    When insert the TC Identity Number in TC ID box
     And press enter
     And continue if
     And assert the patient's TC ID

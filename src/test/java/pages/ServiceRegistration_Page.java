@@ -600,10 +600,14 @@ public class ServiceRegistration_Page {
 
     public void clickOnLabButton() {
         lab_button.click();
+        ReusableMethods.waitFor(2);
     }
 
     public void assertTheLabPreAcceptancePage() {
         String labPageTitle = "Lab. Ön Kabul";
+        System.out.println("expected labPageTitle = " + labPageTitle);
+        System.out.println("actual labPageTitle = " + popUpPage_Title.getText());
+
         Assert.assertEquals(popUpPage_Title.getText(), labPageTitle);
     }
 
@@ -622,6 +626,7 @@ public class ServiceRegistration_Page {
     public void goToAccountSection() {
         ReusableMethods.waitForVisibility(account_section, 4);
         ReusableMethods.jseWithClick(Driver.getDriver(), account_section);
+        ReusableMethods.waitFor(2);
         //account_section.click();
     }
 
@@ -676,7 +681,9 @@ public class ServiceRegistration_Page {
     }
 
     public void clickOnChangeButton() {
-        serviceChange_button.click();
+        ReusableMethods.jseWithClick(Driver.getDriver(),serviceChange_button);
+        //serviceChange_button.click();
+        ReusableMethods.waitFor(2);
     }
 
     public void assertTheServiceListPopupPage() {
@@ -792,6 +799,7 @@ public class ServiceRegistration_Page {
 
     public void clickOnGssCButton() {
         gssC00_button.click();
+        ReusableMethods.waitFor(2);
     }
 
     public void assertThePopupSection(String arg0) {
@@ -800,6 +808,7 @@ public class ServiceRegistration_Page {
 
     public void clickOnGelisSekliDropDownList() {
         gelisSekli_dropDown.click();
+        ReusableMethods.waitFor(1);
     }
 
     public void assertTheGelisSekliDropDown() {
@@ -809,6 +818,7 @@ public class ServiceRegistration_Page {
 
     public void clickOnTedaviTipiDropDownList() {
         tedaviTipi_dropDown.click();
+        ReusableMethods.waitFor(1);
     }
 
     public void assertTheTedaviTipiDropDownList() {
