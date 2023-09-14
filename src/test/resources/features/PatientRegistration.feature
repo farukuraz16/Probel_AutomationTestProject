@@ -40,7 +40,6 @@ Feature: probel_hastaKayit
     And user click kaydet
     And user verifies the message "Bilgiler kaydedildi."
     And  user breaks down the popup to the TAMAM button
-    Then user closes the application
 
   @TC0002 @Bug
   Scenario: TC0002 - Received an error "Passport No/Id" when the user entered an incorrect "Tahsis No/Id"
@@ -64,7 +63,6 @@ Feature: probel_hastaKayit
     And user click kaydet
     And user verifies the message "Bilgiler kaydedildi."
     And  user breaks down the popup to the TAMAM button
-    Then user closes the application
 
 
   @TC0005 @Bug
@@ -91,7 +89,6 @@ Feature: probel_hastaKayit
     And user click kaydet
     And user verifies the message "Bilgiler kaydedildi."
     And  user breaks down the popup to the TAMAM button
-    Then user closes the application
 
   @TC0006 @Bug
   Scenario: TC0006 - User can write their private names such as Mother Name, Father Name, Place of Birth in lower case
@@ -116,7 +113,8 @@ Feature: probel_hastaKayit
     And user click kaydet
     And user verifies the message "Bilgiler kaydedildi."
     And  user breaks down the popup to the TAMAM button
-    Then user closes the application
+
+
 
   @TC0007 @Bug @Smoke
   Scenario:TC0007 - The user can register in the Foreign patient type "Tourist's Health" option on the Home page
@@ -138,7 +136,7 @@ Feature: probel_hastaKayit
     And user clicks on home page foreign patient type
     And user writes on the popup  health of the tourist
     And user assert the registration
-    Then user closes the application
+
 
   @TC0045
   Scenario:TC0045 - The user registers a patient in the type "TİKA TARAFINDAN GETİRİLEN HASTALAR"
@@ -176,7 +174,7 @@ Feature: probel_hastaKayit
     And user click kaydet
     And user verifies the message "Bilgiler kaydedildi."
     And  user breaks down the popup to the TAMAM button
-    Then user closes the application
+
 
   @TC0046
   Scenario:TC0046 - The user registers a patient in the type " TURİSTİN SAĞLIĞI"
@@ -214,7 +212,7 @@ Feature: probel_hastaKayit
     And user click kaydet
     And user verifies the message "Bilgiler kaydedildi."
     And  user breaks down the popup to the TAMAM button
-    Then user closes the application
+
 
 
   @TC0047
@@ -253,7 +251,7 @@ Feature: probel_hastaKayit
     And user click kaydet
     And user verifies the message "Bilgiler kaydedildi."
     And  user breaks down the popup to the TAMAM button
-    Then user closes the application
+
 
   @TC0048 @Bug
   Scenario:TC0048 - User registers with phone number in correct format
@@ -291,7 +289,7 @@ Feature: probel_hastaKayit
     And user click kaydet
     And user verifies the message "Bilgiler kaydedildi."
     And  user breaks down the popup to the TAMAM button
-    Then user closes the application
+
 
   @TC0049 @Bug @Smoke
   Scenario:TC0049 - User registers with name and surname in the appropriate format
@@ -317,7 +315,7 @@ Feature: probel_hastaKayit
     And user click kaydet
     And user verifies the message "Bilgiler kaydedildi."
     And  user breaks down the popup to the TAMAM button
-    Then user closes the application
+
 
 
   @TC0050 @Bug @Smoke
@@ -347,7 +345,7 @@ Feature: probel_hastaKayit
     And user click kaydet
     And user verifies the message "Bilgiler kaydedildi."
     And  user breaks down the popup to the TAMAM button
-    Then user closes the application
+
 
   @TC0064
   Scenario: TC0064 - 13_17_99 Person Information data entry by Patient Type and nationality of countries other than Turkey
@@ -370,7 +368,7 @@ Feature: probel_hastaKayit
     And user click Kaydet button
     And user close the message bilgiler kaydedildi
     And user registration verifies
-    Then user closes the application
+
 
   @TC0064_D0025 @Bug
   Scenario: TC0064 - D0025 - There is no such country as Seysel
@@ -393,8 +391,7 @@ Feature: probel_hastaKayit
     And user click Kaydet button
     And user close the message bilgiler kaydedildi
     And user registration verifies
-    Then user closes the application
-    Then user closes the application
+
 
   @TC0064_D0026 @Bug
   Scenario:TR0064 - D0026 - In September 2018, Svaziland changed its name to Eswatini. Estawani not on the new list
@@ -417,7 +414,7 @@ Feature: probel_hastaKayit
     And user click Kaydet button
     And user close the message bilgiler kaydedildi
     And user registration verifies
-    Then user closes the application
+
 
 
   @TC0064_D0027 @Bug @Smoke
@@ -441,8 +438,8 @@ Feature: probel_hastaKayit
     And user click Kaydet button
     And user close the message bilgiler kaydedildi
     And user registration verifies
-    Then user closes the application
-    Then user closes the application
+
+
 
   @TC0064_D0024 @Bug
   Scenario:TR0064 - D0024 - There is a meaningless country name in the country option under the Uyrugu
@@ -465,8 +462,8 @@ Feature: probel_hastaKayit
     And user click Kaydet button
     And user close the message bilgiler kaydedildi
     And user registration verifies
-    Then user closes the application
-    Then user closes the application
+
+
 
   @TC0065 @Bug
   Scenario:TR0065 - data entry according to Patient Type 13_17_99 by clicking yeni dogan checkbox
@@ -487,7 +484,7 @@ Feature: probel_hastaKayit
     And user enters the baby birthday
     And user clicks on the save button
     And user assert issue message
-    Then user closes the application
+
 
   @TC0069 @Bug
   Scenario: TR0069 - D0028 - There is more than one of the same options in the "Basvuru sekli" drop-down box
@@ -518,7 +515,7 @@ Feature: probel_hastaKayit
     And user click Kaydet button
     And user close the message bilgiler kaydedildi
     And user registration verifies
-    Then user closes the application
+
 
   @TC0118
   Scenario: TC0118 - "Tc" Kimlik no" error message verification
