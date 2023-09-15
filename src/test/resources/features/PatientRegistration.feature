@@ -115,7 +115,6 @@ Feature: probel_hastaKayit
     And  user breaks down the popup to the TAMAM button
 
 
-
   @TC0170 @Bug @Smoke
   Scenario:TC0170 - The user can register in the Foreign patient type "Tourist's Health" option on the Home page
     Given Enter Kurum, Kurum detay
@@ -138,8 +137,8 @@ Feature: probel_hastaKayit
     And user assert the registration
 
 
-  @TC0045
-  Scenario:TR0171 - The user registers a patient in the type "TIKA TARAFINDAN GETIRILEN HASTALAR"
+  @TC0171
+  Scenario: TC0171 - The user registers a patient in the type "TIKA TARAFINDAN GETIRILEN HASTALAR"
     Given Enter Kurum, Kurum detay
     And user selects the Uyruk SURİYE
     And user click hasta Turu
@@ -176,8 +175,8 @@ Feature: probel_hastaKayit
     And  user breaks down the popup to the TAMAM button
 
 
-  @TC0046
-  Scenario:TR0172 - The user registers a patient in the type " TURİSTİN SAĞLIĞI"
+  @TC0172
+  Scenario: TC0172 - The user registers a patient in the type " TURİSTİN SAĞLIĞI"
     Given Enter Kurum, Kurum detay
     And user selects the Uyruk ALMANYA
     And user click hasta Turu
@@ -215,8 +214,8 @@ Feature: probel_hastaKayit
 
 
 
-  @TC0047
-  Scenario:TR0173 - The user registers a patient in the type "TÜRK SOYLU YABANCILAR"
+  @TC0173
+  Scenario: TC0173 - The user registers a patient in the type "TÜRK SOYLU YABANCILAR"
     Given Enter Kurum, Kurum detay
     And user selects the Uyruk AZERBEYCAN
     And user click hasta Turu
@@ -253,8 +252,8 @@ Feature: probel_hastaKayit
     And  user breaks down the popup to the TAMAM button
 
 
-  @TC0048 @Bug
-  Scenario:TR0174 - User registers with phone number in correct format
+  @TC0174 @Bug
+  Scenario: TC0174 - User registers with phone number in correct format
     Given Enter Kurum, Kurum detay
     And user selects the Uyruk AZERBEYCAN
     And user click hasta Turu
@@ -291,8 +290,8 @@ Feature: probel_hastaKayit
     And  user breaks down the popup to the TAMAM button
 
 
-  @TC0049 @Bug @Smoke
-  Scenario:TR0175 - User registers with name and surname in the appropriate format
+  @TC0175 @Bug @Smoke
+  Scenario:TC0175 - User registers with name and surname in the appropriate format
     Given Enter Kurum, Kurum detay
     And user selects the Uyruk AZERBEYCAN
     And user click hasta Turu
@@ -318,8 +317,8 @@ Feature: probel_hastaKayit
 
 
 
-  @TC0050 @Bug @Smoke
-  Scenario:TR0176 - User registers with baba adı, anne adı and dogum yeri in the appropriate format
+  @TC0176 @Bug @Smoke
+  Scenario:TC0176 - User registers with baba adı, anne adı and dogum yeri in the appropriate format
     Given Enter Kurum, Kurum detay
     And user selects the Uyruk AZERBEYCAN
     And user click hasta Turu
@@ -394,7 +393,7 @@ Feature: probel_hastaKayit
 
 
   @TC0064_D0026 @Bug
-  Scenario:TR0064 - D0026 - In September 2018, Svaziland changed its name to Eswatini. Estawani not on the new list
+  Scenario:TC0064 - D0026 - In September 2018, Svaziland changed its name to Eswatini. Estawani not on the new list
     Given Enter Kurum, Kurum detay
     And user selects the Uyruk as Svaziland
     And user click hasta Turu
@@ -418,7 +417,7 @@ Feature: probel_hastaKayit
 
 
   @TC0064_D0027 @Bug @Smoke
-  Scenario:TR0064 - D0027 - The Tahsis No ve Karne Seri No required for Syrian refugees, but also for Germany and Argentina
+  Scenario:TC0064 - D0027 - The Tahsis No ve Karne Seri No required for Syrian refugees, but also for Germany and Argentina
     Given Enter Kurum, Kurum detay
     And user selects the Uyruk as Almanya
     And user click hasta Turu
@@ -442,7 +441,7 @@ Feature: probel_hastaKayit
 
 
   @TC0064_D0024 @Bug
-  Scenario:TR0064 - D0024 - There is a meaningless country name in the country option under the Uyrugu
+  Scenario:TC0064 - D0024 - There is a meaningless country name in the country option under the Uyrugu
     Given Enter Kurum, Kurum detay
     And user selects the Uyruk as ??L?
     And user click hasta Turu
@@ -487,14 +486,14 @@ Feature: probel_hastaKayit
 
 
   @TC0069 @Bug
-  Scenario: TR0069 - D0028 - There is more than one of the same options in the "Basvuru sekli" drop-down box
+  Scenario: TC0069 - D0028 - There is more than one of the same options in the "Basvuru sekli" drop-down box
     Given Enter Kurum, Kurum detay
     And user click Basvuru sekli
     And user select Basvuru sekli
     And user assert that the options in the list are unique
 
-  @TR0073 @Bug
-  Scenario: TR0073 - when you first click on the phone textbox and then enter the institution information, the process gives a successful message
+  @TC0073 @Bug
+  Scenario: TC0073 - when you first click on the phone textbox and then enter the institution information, the process gives a successful message
     Given Enter Kurum, Kurum detay
     And user selects the Uyruk
     And user click hasta Turu
@@ -809,8 +808,8 @@ Feature: probel_hastaKayit
       | 15.08.2000 |
       | 15.08.1990 |
 
-  @TC142
-  Scenario: TC142  If something except Kendisi is selected, then Kart Sahibi box should be active (Kimliksiz Hasta)
+  @TC0142
+  Scenario: TC0142  If something except Kendisi is selected, then Kart Sahibi box should be active (Kimliksiz Hasta)
     Given Enter Kurum, Kurum detay
     When Select Kimliksiz Hasta from   Hasta Turu drop down menu on Hasta Kayit Page
     And Select Proximity from Yakinligi drop down menu on Hasta Kayit Page
@@ -927,7 +926,7 @@ Feature: probel_hastaKayit
     Then User verifies that the message "motherTCWarningMessage" is displayed
 
   @TC0182
-  Scenario:TC0182 User should enter "Cep Telefonu" information for registration whose nationality is Turkey
+  Scenario: TC0182 User should enter "Cep Telefonu" information for registration whose nationality is Turkey
     Given Enter Kurum, Kurum detay
     And User clicks Patient Type box and Choose Button on dual citizens
     And User enters "surname" in surname box
