@@ -66,7 +66,7 @@ Feature: probel_hastaKayit
 
 
   @TC0005 @Bug
-  Scenario: TC0005 - Armutlu was chosen as the district of Izmir.
+  Scenario: TR0168 - Armutlu was chosen as the district of Izmir.
     Given Enter Kurum, Kurum detay
     And user selects the Uyruk
     And user click hasta Turu
@@ -78,7 +78,7 @@ Feature: probel_hastaKayit
     And user writes Passport Id
     And user writes Passport No
     And user selects a gender
-    And user chooses ilçe
+    And user chooses ilce
     And user enters the mobile phone
     And user clicks on the save button
     And user assert the registration
@@ -91,7 +91,7 @@ Feature: probel_hastaKayit
     And  user breaks down the popup to the TAMAM button
 
   @TC0006 @Bug
-  Scenario: TC0006 - User can write their private names such as Mother Name, Father Name, Place of Birth in lower case
+  Scenario: TR0169 - User can write their private names such as Mother Name, Father Name, Place of Birth in lower case
     Given Enter Kurum, Kurum detay
     When user selects the Uyruk
     And user click hasta Turu
@@ -117,7 +117,7 @@ Feature: probel_hastaKayit
 
 
   @TC0007 @Bug @Smoke
-  Scenario:TC0007 - The user can register in the Foreign patient type "Tourist's Health" option on the Home page
+  Scenario:TR0170 - The user can register in the Foreign patient type "Tourist's Health" option on the Home page
     Given Enter Kurum, Kurum detay
     And user selects the Uyruk
     And user click hasta Turu
@@ -139,7 +139,7 @@ Feature: probel_hastaKayit
 
 
   @TC0045
-  Scenario:TC0045 - The user registers a patient in the type "TİKA TARAFINDAN GETİRİLEN HASTALAR"
+  Scenario:TR0171 - The user registers a patient in the type "TIKA TARAFINDAN GETIRILEN HASTALAR"
     Given Enter Kurum, Kurum detay
     And user selects the Uyruk SURİYE
     And user click hasta Turu
@@ -161,7 +161,7 @@ Feature: probel_hastaKayit
     And user chooses a profession
     And user selects the learning
     And user selects the blood type
-    And user chooses ilçe Aliaga
+    And user chooses ilce Aliaga
     And user clik Email button
     And user click kimlik fotokopisi alindi button
     And user click KVKK button
@@ -177,7 +177,7 @@ Feature: probel_hastaKayit
 
 
   @TC0046
-  Scenario:TC0046 - The user registers a patient in the type " TURİSTİN SAĞLIĞI"
+  Scenario:TR0172 - The user registers a patient in the type " TURİSTİN SAĞLIĞI"
     Given Enter Kurum, Kurum detay
     And user selects the Uyruk ALMANYA
     And user click hasta Turu
@@ -199,7 +199,7 @@ Feature: probel_hastaKayit
     And user chooses a profession
     And user selects the learning
     And user selects the blood type
-    And user chooses ilçe Aliaga
+    And user chooses ilce Aliaga
     And user clik Email button
     And user click kimlik fotokopisi alindi button
     And user click KVKK button
@@ -216,7 +216,7 @@ Feature: probel_hastaKayit
 
 
   @TC0047
-  Scenario:TC0047 - The user registers a patient in the type "TÜRK SOYLU YABANCILAR"
+  Scenario:TR0173 - The user registers a patient in the type "TÜRK SOYLU YABANCILAR"
     Given Enter Kurum, Kurum detay
     And user selects the Uyruk AZERBEYCAN
     And user click hasta Turu
@@ -238,7 +238,7 @@ Feature: probel_hastaKayit
     And user chooses a profession
     And user selects the learning
     And user selects the blood type
-    And user chooses ilçe Aliaga
+    And user chooses ilce Aliaga
     And user clik Email button
     And user click kimlik fotokopisi alindi button
     And user click KVKK button
@@ -254,7 +254,7 @@ Feature: probel_hastaKayit
 
 
   @TC0048 @Bug
-  Scenario:TC0048 - User registers with phone number in correct format
+  Scenario:TR0174 - User registers with phone number in correct format
     Given Enter Kurum, Kurum detay
     And user selects the Uyruk AZERBEYCAN
     And user click hasta Turu
@@ -276,7 +276,7 @@ Feature: probel_hastaKayit
     And user chooses a profession
     And user selects the learning
     And user selects the blood type
-    And user chooses ilçe Aliaga
+    And user chooses ilce Aliaga
     And user clik Email button
     And user click kimlik fotokopisi alindi button
     And user click KVKK button
@@ -292,7 +292,7 @@ Feature: probel_hastaKayit
 
 
   @TC0049 @Bug @Smoke
-  Scenario:TC0049 - User registers with name and surname in the appropriate format
+  Scenario:TR0175 - User registers with name and surname in the appropriate format
     Given Enter Kurum, Kurum detay
     And user selects the Uyruk AZERBEYCAN
     And user click hasta Turu
@@ -319,7 +319,7 @@ Feature: probel_hastaKayit
 
 
   @TC0050 @Bug @Smoke
-  Scenario:TC0050 - User registers with baba adı, anne adı and dogum yeri in the appropriate format
+  Scenario:TR0176 - User registers with baba adı, anne adı and dogum yeri in the appropriate format
     Given Enter Kurum, Kurum detay
     And user selects the Uyruk AZERBEYCAN
     And user click hasta Turu
