@@ -826,7 +826,7 @@ public class PatientRegistration_StepDefinitions {
         hkp.kaydetButton.click();
         Assert.assertTrue(hkp.massageVerfy.isDisplayed());
     }
-    @Then("Select a valid Poliklinik on Muayene Kayıt Page")
+    @Then("Select a valid Poliklinik on Muayene Kayit Page")
     public void select_a_valid_poliklinik_on_muayene_kayıt_page() {
         ReusableMethods.doubleClick(hkp.poliklinkSearchBox);
         ReusableMethods.doubleClick(hkp.acilPoliklinkButton);
@@ -836,11 +836,11 @@ public class PatientRegistration_StepDefinitions {
         Select select = new Select(hkp.gelisNedeni);
         select.selectByVisibleText("Ayaktan");
     }
-    @Then("Click Kaydet button on Muayene Kayıt Page")
+    @Then("Click Kaydet button on Muayene Kayit Page")
     public void click_kaydet_button_on_muayene_kayıt_page() {
         hkp.kaydetButton.click();
     }
-    @Then("Bilgiler Kaydedildi should be seen on Popup Alert on Muayene Kayıt Page")
+    @Then("Bilgiler Kaydedildi should be seen on Popup Alert on Muayene Kayit Page")
     public void bilgiler_kaydedildi_should_be_seen_on_popup_alert_on_muayene_kayıt_page() {
         Assert.assertTrue(hkp.massageVerfy.isDisplayed());
     }
@@ -865,13 +865,13 @@ public class PatientRegistration_StepDefinitions {
         hkp.anneDogumTarihiSearchBox.sendKeys("14/10/2023");
         Thread.sleep(2000);
     }
-    @Then("select -Hasta türü- -Kimliksiz hasta-")
-    public void select_hasta_türü_kimliksiz_hasta() throws InterruptedException {
+    @Then("select -Hasta Turu- -Kimliksiz hasta-")
+    public void select_hasta_Turu_kimliksiz_hasta() throws InterruptedException {
         hkp.hastaTuruButton.click();
         Thread.sleep(3000);
         hkp.kimliksizHastaButton.click();
     }
-    @Then("Enter -Kişi bilgileri- -TC-,-Adı-,-Soyadı-,-cinsiyet-,-Baba Adı-,-Anne adi-,-Doğum yeri-,-Anne tc-")
+    @Then("Enter -Kişi bilgileri- -TC-,-Adi-,-Soyadi-,-cinsiyet-,-Baba Adi-,-Anne adi-,-Doğum yeri-,-Anne tc-")
     public void enter_kişi_bilgileri_tc_adı_soyadı_cinsiyet_baba_adı_anne_adi_doğum_yeri_anne_tc() throws InterruptedException {
         Thread.sleep(2000);
         hkp.adiSearchBox.sendKeys(faker.name().firstName());
@@ -904,7 +904,7 @@ public class PatientRegistration_StepDefinitions {
         hkp.bebeginDogumGunuSearchBox.sendKeys(faker.number().digit());
         hkp.bebeginDogumHaftasiSearchBox.sendKeys(faker.number().digit());
     }
-    @Then("Enter -Kişi bilgileri- -TC-,-Adı-,-Soyadı-,-cinsiyet-,-Baba Adi-,-Anne adi-,-Dogum yeri-,-Anne tc-")
+    @Then("Enter -Kişi bilgileri- -TC-,-Adi-,-Soyadi-,-cinsiyet-,-Baba Adi-,-Anne adi-,-Dogum yeri-,-Anne tc-")
     public void enter_kişi_bilgileri_tc_adı_soyadı_cinsiyet_baba_adi_anne_adi_dogum_yeri_anne_tc() throws InterruptedException {
         Thread.sleep(2000);
         hkp.hastaTuruButton.click();
@@ -919,8 +919,8 @@ public class PatientRegistration_StepDefinitions {
         hkp.ceptelefonu.sendKeys("5421478956");
         Thread.sleep(3000);
     }
-    @Then("-Doğum T.- enter a future date")
-    public void doğum_t_enter_a_future_date() throws InterruptedException {
+    @Then("-Dogum T.- enter a future date")
+    public void dogum_t_enter_a_future_date() throws InterruptedException {
         hkp.dogumTarihiSearchBox.sendKeys("25/09/2024");
         Thread.sleep(4000);
     }
@@ -1053,125 +1053,125 @@ public class PatientRegistration_StepDefinitions {
         hkp.ceptelefonu.sendKeys("05416985423");
         Thread.sleep(2000);
     }
-    @And("-Doğum tarihi {int} günü geçmiş hastalar için yenidoğan seçeneği işaretlenemez..!- veryfy")
-    public void doğumTarihiGünüGeçmişHastalarIçinYenidoğanSeçeneğiIşaretlenemezVeryfy(int arg0) {
+    @And("-Dogum tarihi {int} günü gecmis hastalar icin yenidogan secenegi isaretlenemez..!- veryfy")
+    public void dogumTarihiGünüGecmisHastalarIcinYenidoganSecenegiIsaretlenemezVeryfy(int arg0) {
         System.out.println(hkp.massageVerfy.getText());
         String expected = "Doğum tarihi 30 günü geçmiş hastalar için yenidoğan seçeneği işaretlenemez..!";
         String actual = hkp.massageVerfy.getText();
         Assert.assertEquals(expected,actual);
     }
-    @When("Select Kimliksiz Hasta from   Hasta Türü drop down menu on Hasta Kayıt Page")
-    public void selectKimliksizHastaFromHastaTuruDropDownMenuOnHastaKayıtPage() {
+    @When("Select Kimliksiz Hasta from   Hasta Turu drop down menu on Hasta Kayit Page")
+    public void selectKimliksizHastaFromHastaTuruDropDownMenuOnHastaKayitPage() {
         hkp.selectWithoutId();
     }
 
-    @And("Write a valid Cep Telefonu on Hasta Kayıt Page")
-    public void writeAValidCepTelefonuOnHastaKayıtPage() {
+    @And("Write a valid Cep Telefonu on Hasta Kayit Page")
+    public void writeAValidCepTelefonuOnHastaKayitPage() {
         hkp.writeValidMobilePhone();
     }
 
-    @And("Select a valid Doğum Tarihi on Hasta Kayıt Page")
-    public void selectAValidDogumTarihiOnHastaKayıtPage() {
+    @And("Select a valid Dogum Tarihi on Hasta Kayit Page")
+    public void selectAValidDogumTarihiOnHastaKayitPage() {
         hkp.selectValidBirthday();
     }
 
-    @And("Select Cinsiyeti on Hasta Kayıt Page")
-    public void selectCinsiyetiOnHastaKayıtPage() {
+    @And("Select Cinsiyeti on Hasta Kayit Page")
+    public void selectCinsiyetiOnHastaKayitPage() {
         hkp.selectGender();
     }
 
 
-    @And("Write a valid Soyadı on Hasta Kayıt Page")
-    public void writeAValidSoyadıOnHastaKayıtPage() {
+    @And("Write a valid Soyadi on Hasta Kayit Page")
+    public void writeAValidSoyadiOnHastaKayitPage() {
         hkp.writeValidLastName();
     }
 
-    @And("Write a valid Adı on Hasta Kayıt Page")
-    public void writeAValidAdıOnHastaKayıtPage() {
+    @And("Write a valid Adi on Hasta Kayit Page")
+    public void writeAValidAdiOnHastaKayitPage() {
         hkp.writeValidName();
     }
 
-    @And("Select a valid Yakınlığı on Hasta Kayıt Page")
-    public void selectAValidYakınlıgıOnHastaKayıtPage() {
+    @And("Select a valid Yakinligi on Hasta Kayit Page")
+    public void selectAValidYakınlıgıOnHastaKayitPage() {
         hkp.selectValidRelation();
     }
 
-    @And("Click Kaydet button on Hasta Kayıt Page")
-    public void clickKaydetButtonOnHastaKayıtPage() {
+    @And("Click Kaydet button on Hasta Kayit Page")
+    public void clickKaydetButtonOnHastaKayitPage() {
         hkp.clickSaveButton();
     }
 
-    @And("Click the Bilgi button on Hasta Kayıt Page")
-    public void clickTheBilgiButtonOnHastaKayıtPage() throws InterruptedException {
+    @And("Click the Bilgi button on Hasta Kayit Page")
+    public void clickTheBilgiButtonOnHastaKayitPage() throws InterruptedException {
         hkp.clickInfoButton();
     }
 
-    @And("Click the Kapat button on Hasta Kayıt Page")
-    public void clickTheKapatButtonOnHastaKayıtPage() {
+    @And("Click the Kapat button on Hasta Kayit Page")
+    public void clickTheKapatButtonOnHastaKayitPage() {
         hkp.clickCloseButton();
     }
 
 
-    @And("Select an invalid future  Doğum Tarihi on Hasta Kayıt Page")
-    public void selectAnInvalidFutureDogumTarihiOnHastaKayıtPage() {
+    @And("Select an invalid future  Dogum Tarihi on Hasta Kayit Page")
+    public void selectAnInvalidFutureDogumTarihiOnHastaKayitPage() {
         hkp.selectAnInvalidFutureBirthday();
     }
 
-    @Then("İşlem Başarılı   shouldnt be seen on popoup on Hasta Kayıt Page")
-    public void islemBasarılıShouldntBeSeenOnPopoupOnHastaKayıtPage() {
+    @Then("Islem Basarili   shouldnt be seen on popoup on Hasta Kayit Page")
+    public void islemBasarılıShouldntBeSeenOnPopoupOnHastaKayitPage() {
         hkp.operationFailded();
     }
 
-    @And("Write a statement contains some numbers  as Soyadı  on Hasta Kayıt Page")
-    public void writeAStatementContainsSomeNumbersAsSoyadıOnHastaKayıtPage() {
+    @And("Write a statement contains some numbers  as Soyadi  on Hasta Kayit Page")
+    public void writeAStatementContainsSomeNumbersAsSoyadiOnHastaKayitPage() {
         hkp.writeContainsNumbersLastNameBox();
     }
 
-    @And("Write a statement contains some numbers  as Adı  on Hasta Kayıt Page")
-    public void writeAStatementContainsSomeNumbersAsAdıOnHastaKayıtPage() {
+    @And("Write a statement contains some numbers  as Adi  on Hasta Kayit Page")
+    public void writeAStatementContainsSomeNumbersAsAdiOnHastaKayitPage() {
         hkp.writeContainsNumbersNameBox();
 
     }
 
-    @And("click Yenidoğan checkbox  on Hasta Kayıt Page")
-    public void clickYenidoganCheckboxOnHastaKayıtPage() {
+    @And("click Yenidoğan checkbox  on Hasta Kayit Page")
+    public void clickYenidoganCheckboxOnHastaKayitPage() {
         hkp.clickNewbornBox();
     }
 
-    @And("Select a valid date within one month at the latest as Doğum Tarihi on Hasta Kayıt Page")
-    public void selectAValidDateWithinOneMonthAtTheLatestAsDogumTarihiOnHastaKayıtPage() {
+    @And("Select a valid date within one month at the latest as Dogum Tarihi on Hasta Kayit Page")
+    public void selectAValidDateWithinOneMonthAtTheLatestAsDogumTarihiOnHastaKayitPage() {
         hkp.selectValidDateWithinOneMonth();
     }
 
-    @And("write a valid value on Haftası for Bebeğin Doğum  on Hasta Kayıt Page")
-    public void writeAValidValueOnHaftasıForBebeginDogumOnHastaKayıtPage() {
+    @And("write a valid value on Haftası for Bebeğin Dogum  on Hasta Kayit Page")
+    public void writeAValidValueOnHaftasıForBebeginDogumOnHastaKayitPage() {
         hkp.writeValidWeek();
     }
 
-    @And("write a valid value on Günü for Bebeğin Doğum  on Hasta Kayıt Page")
-    public void writeAValidValueOnGunuForBebeginDogumOnHastaKayıtPage() {
+    @And("write a valid value on Günü for Bebeğin Dogum  on Hasta Kayit Page")
+    public void writeAValidValueOnGunuForBebeginDogumOnHastaKayitPage() {
         hkp.writeValidDay();
     }
 
-    @And("Select Cinsiyeti as Erkek on Hasta Kayıt Page")
-    public void selectCinsiyetiAsErkekOnHastaKayıtPage() {
+    @And("Select Cinsiyeti as Erkek on Hasta Kayit Page")
+    public void selectCinsiyetiAsErkekOnHastaKayitPage() {
         hkp.selectCinsiyetiAsMan();
     }
 
-    @And("Select country  from   Uyruğu drop down menu on Hasta Kayıt Page")
-    public void selectCountryFromUyruguDropDownMenuOnHastaKayıtPage(DataTable dataTable) {
+    @And("Select country  from   Uyruğu drop down menu on Hasta Kayit Page")
+    public void selectCountryFromUyruguDropDownMenuOnHastaKayitPage(DataTable dataTable) {
         hkp.selectCountryDropDown(dataTable);
     }
 
 
-    @And("click Mavikart checkbox on Hasta Kayıt Page")
-    public void clickMavikartCheckboxOnHastaKayıtPage() {
+    @And("click Mavikart checkbox on Hasta Kayit Page")
+    public void clickMavikartCheckboxOnHastaKayitPage() {
         hkp.clickCheckBox();
     }
 
 
-    @Then("Only positive integers should be written to Doğumsırası on Hasta Kayıt Page")
-    public void writeSomeNumbersToDogumsırasıOnHastaKayıtPage(DataTable dataTable) {
+    @Then("Only positive integers should be written to Dogumsırası on Hasta Kayit Page")
+    public void writeSomeNumbersToDogumsırasıOnHastaKayitPage(DataTable dataTable) {
         hkp.checkValidNumbers(dataTable);
 
     }
@@ -1183,22 +1183,22 @@ public class PatientRegistration_StepDefinitions {
     }
 
 
-    @And("Only valid Birth Dates should be accepted on Hasta Kayıt Sayfası")
-    public void onlyValidBirthDatesShouldBeAcceptedOnHastaKayıtSayfası(DataTable dataTable) throws ParseException, InterruptedException {
+    @And("Only valid Birth Dates should be accepted on Hasta Kayit Sayfası")
+    public void onlyValidBirthDatesShouldBeAcceptedOnHastaKayitSayfası(DataTable dataTable) throws ParseException, InterruptedException {
         hkp.chechValidBirthDates(dataTable);
 
 
     }
 
 
-    @And("click  E-mail Gönderilebilir button   on Hasta Kayıt Page")
-    public void clickEMailGonderilebilirButtonOnHastaKayıtPage() {
+    @And("click  E-mail Gönderilebilir button   on Hasta Kayit Page")
+    public void clickEMailGonderilebilirButtonOnHastaKayitPage() {
         hkp.clickEmailCheckBox();
     }
 
 
-    @And("E-mail box should be active on Hasta Kayıt Page")
-    public void eMailBoxShouldBeActiveOnHastaKayıtPage() {
+    @And("E-mail box should be active on Hasta Kayit Page")
+    public void eMailBoxShouldBeActiveOnHastaKayitPage() {
         hkp.checkEmailActive();
 
     }
@@ -1208,37 +1208,37 @@ public class PatientRegistration_StepDefinitions {
 
 
 
-    @Then("The Age of The Mother shouldn't be smaller than fifteen on Hasta Kayıt Page")
-    public void theAgeOfTheMotherShouldnTBeSmallerThanFifteenOnHastaKayıtPage(DataTable dataTable) throws InterruptedException {
+    @Then("The Age of The Mother shouldn't be smaller than fifteen on Hasta Kayit Page")
+    public void theAgeOfTheMotherShouldnTBeSmallerThanFifteenOnHastaKayitPage(DataTable dataTable) throws InterruptedException {
 
         hkp.checkAgeOfMother(dataTable);
     }
 
-    @And("Select Proximity from Yakınlığı drop down menu on Hasta Kayıt Page")
-    public void SelectProximityfromYakınlığıDropDownMenuOnHastaKayıtPage() {
+    @And("Select Proximity from Yakinligi drop down menu on Hasta Kayit Page")
+    public void SelectProximityfromYakinligiDropDownMenuOnHastaKayitPage() {
         hkp.clickProximity();
     }
 
 
-    @Then("Kart Sahibi box should be active on Hasta Kayıt Page when If something except Kendisi is selected")
-    public void kartSahibiBoxShouldBeActiveOnHastaKayıtPageWhenIfSomethingExceptKendisiIsSelected() throws InterruptedException {
+    @Then("Kart Sahibi box should be active on Hasta Kayit Page when If something except Kendisi is selected")
+    public void kartSahibiBoxShouldBeActiveOnHastaKayitPageWhenIfSomethingExceptKendisiIsSelected() throws InterruptedException {
         hkp.checkProximity();
     }
 
-    @When("Select Mavi Kartlılar from   Hasta Türü drop down menu on Hasta Kayıt Page")
-    public void selectMaviKartlılarFromHastaTuruDropDownMenuOnHastaKayıtPage() {
+    @When("Select Mavi Kartlılar from   Hasta Turu drop down menu on Hasta Kayit Page")
+    public void selectMaviKartlılarFromHastaTuruDropDownMenuOnHastaKayitPage() {
         hkp.selectWithBlueCards();
     }
 
 
-    @And("Write a valid T.C. Kimlik No on Hasta Kayıt Page")
-    public void writeAValidTCKimlikNoOnHastaKayıtPage() {
+    @And("Write a valid T.C. Kimlik No on Hasta Kayit Page")
+    public void writeAValidTCKimlikNoOnHastaKayitPage() {
         hkp.writeValidID();
     }
 
 
-    @Then("If Id is valid then İşlem Başarılı   should be seen on popoup on Hasta Kayıt Page")
-    public void ifIdIsValidThenIslemBasarılıShouldBeSeenOnPopoupOnHastaKayıtPage(DataTable dataTable) throws InterruptedException {
+    @Then("If Id is valid then Islem Basarili   should be seen on popoup on Hasta Kayit Page")
+    public void ifIdIsValidThenIslemBasarılıShouldBeSeenOnPopoupOnHastaKayitPage(DataTable dataTable) throws InterruptedException {
         hkp.checkIdValidaty(dataTable);
     }
 

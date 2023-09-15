@@ -17,33 +17,25 @@ public class ServiceRegistration_StepDefinitions {
 
 
 
-    @And("Select Acil Erişkin Müşahade on Poliklinik on Muayene Kayıt Page")
-    public void selectAcilEriskinMusahadeOnPoliklinikOnMuayeneKayıtPage() {
-        mkp.emergencyAdult();
-    }
 
-    @Then("Bilgiler Kaydedildi shouldnt be seen on Popup Alert on Muayene Kayıt Page")
-    public void bilgilerKaydedildiShouldntBeSeenOnPopupAlertOnMuayeneKayıtPage() {
+
+    @Then("Bilgiler Kaydedildi shouldnt be seen on Popup Alert on Muayene Kayit Page")
+    public void bilgilerKaydedildiShouldntBeSeenOnPopupAlertOnMuayeneKayitPage() {
         mkp.failAlert();
     }
 
 
-    @When("Select  Poliklinik as KADIN DOĞUM on Muayene Kayıt Page")
-    public void selectPoliklinikAsKADINDOGUMOnMuayeneKayıtPage() {
+    @When("Select  Poliklinik as KADIN DOĞUM on Muayene Kayit Page")
+    public void selectPoliklinikAsKADINDOGUMOnMuayeneKayitPage() {
         mkp.selectPoliklinikAsKadinDogum();
     }
 
 
-    @Then("An alert should be seen on Muayene Kayıt Page")
-    public void anAlertShouldBeSeenOnMuayeneKayıtPage() {
+    @Then("An alert should be seen on Muayene Kayit Page")
+    public void anAlertShouldBeSeenOnMuayeneKayitPage() {
         mkp.alertSeen();
     }
 
-
-    @And("Bilgiler Kaydedildi alert should be seen on Popup Alert on Muayene Kayıt Page")
-    public void bilgilerKaydedildiAlertShouldBeSeenOnPopupAlertOnMuayeneKayıtPage() throws InterruptedException {
-        mkp.succesAlert();
-    }
 
     @And("Select a valid Poliklinik  from on Muayene Kayıt Page")
     public void selectAValidPoliklinikFromOnMuayeneKayıtPage() {
@@ -367,9 +359,9 @@ public class ServiceRegistration_StepDefinitions {
         mkp.assertRecordPopupPage();
     }
 
-    @Then("assert the new record in service's list")
-    public void assertTheNewRecordInServiceSList() {
-        mkp.assertTheNewRecordInServiceSList();
+    @Then("assert the new record in service's list {string}")
+    public void assertTheNewRecordInServiceSList(String arg0) {
+        mkp.assertTheNewRecordInServiceSList(arg0);
     }
 
     @And("click continue button")
@@ -982,6 +974,52 @@ public class ServiceRegistration_StepDefinitions {
     public void insertTheSecondPatientNumberInPatientNumberBox() {
         mkp.insertTheSecondPatientNumberInPatientNumberBox();
     }
+
+    @And("Select a valid Poliklinik  from on Muayene Kayit Page")
+    public void selectAValidPoliklinikFromOnMuayeneKayitPage() {
+        mkp.selectValidPoliklinik();
+    }
+
+    @And("Select a valid Gelis Sekli  from on Muayene Kayit Page")
+    public void selectAValidGelisSekliFromOnMuayeneKayitPage() {
+        mkp.selectAValidArrivalType();
+    }
+
+    @And("Click Kaydet button from on Muayene Kayit Page")
+    public void clickKaydetButtonFromOnMuayeneKayitPage() {
+        mkp.clickSaveButton();
+    }
+
+    @And("Bilgiler Kaydedildi alert should be seen on Popup Alert on Muayene Kayit Page")
+    public void bilgilerKaydedildiAlertShouldBeSeenOnPopupAlertOnMuayeneKayitPage() throws InterruptedException {
+        mkp.succesAlert();
+    }
+
+    @And("Select Acil Eriskin Musahade on Poliklinik on Muayene Kayit Page")
+    public void selectAcilEriskinMusahadeOnPoliklinikOnMuayeneKayitPage() {
+        mkp.emergencyAdult();
+    }
+
+    @And("select new service {string}")
+    public void selectNewService(String arg0) {
+        mkp.selectNewService(arg0);
+    }
+
+    @And("select the assistant {string}")
+    public void selectTheAssistant(String arg0) {
+        mkp.selectTheAssistant(arg0);
+    }
+
+    @And("select the CgrTipiNo {string}")
+    public void selectTheCgrTipiNo(String arg0) {
+        mkp.selectTheCgrTipiNo(arg0);
+    }
+
+    @Then("assert the new service record")
+    public void assertTheNewServiceRecord() {
+        mkp.assertTheNewServiceRecord();
+    }
+
 
     //@When("The user can click hasta button")
    //public void theUserCanClickHastaButton() {

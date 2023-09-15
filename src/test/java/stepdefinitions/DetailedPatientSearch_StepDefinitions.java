@@ -129,6 +129,9 @@ public class DetailedPatientSearch_StepDefinitions {
         dha.CikisTarihi.click();
     }
 
-
+    @Then("Registered patient should be seen on Detayli Hasta Arama Page")
+    public void registeredPatientShouldBeSeenOnDetayliHastaAramaPage() {
+        dha.confirmRegisteredPatient();
+    }
 
 }
