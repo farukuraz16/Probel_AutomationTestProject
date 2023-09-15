@@ -244,8 +244,8 @@ public class PatientRegistration_StepDefinitions {
         hkp.turistButton.click();
     }
 
-    @Given("user chooses ilçe")
-    public void user_chooses_ilçe() {
+    @Given("user chooses ilce")
+    public void user_chooses_ilce() {
         hkp.ilceSearchBox.sendKeys("3555");
 
     }
@@ -314,8 +314,8 @@ public class PatientRegistration_StepDefinitions {
         hkp.KVKK.click();
 
     }
-    @Given("user chooses ilçe Aliaga")
-    public void user_chooses_ilçe_aliaga() {
+    @Given("user chooses ilce Aliaga")
+    public void user_chooses_ilce_aliaga() {
         hkp.ilceSearchBox.sendKeys("3519");
     }
     @Given("user selects the Uyruk ALMANYA")

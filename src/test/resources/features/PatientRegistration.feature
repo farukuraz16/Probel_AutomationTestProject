@@ -8,7 +8,7 @@ Feature: probel_hastaKayit
     And Click the Hasta button
 
   @TC0154 @Bug @Smoke
-  Scenario: TC0001 - The user must not be able to enter a later date for your mother's date of birth
+  Scenario: TC0154 - The user must not be able to enter a later date for your mother's date of birth
     Given Enter Kurum, Kurum detay
     And user selects the Uyruk
     And user writes the name of the mother
@@ -42,7 +42,7 @@ Feature: probel_hastaKayit
     And  user breaks down the popup to the TAMAM button
 
   @TC0155 @Bug
-  Scenario: TC0002 - Received an error "Passport No/Id" when the user entered an incorrect "Tahsis No/Id"
+  Scenario: TC0155 - Received an error "Passport No/Id" when the user entered an incorrect "Tahsis No/Id"
     Given Enter Kurum, Kurum detay
     And user selects the Uyruk
     And user click hasta Turu
@@ -65,8 +65,8 @@ Feature: probel_hastaKayit
     And  user breaks down the popup to the TAMAM button
 
 
-  @TC0005 @Bug
-  Scenario: TC0005 - Armutlu was chosen as the district of Izmir.
+  @TC0168 @Bug
+  Scenario: TC0168 - Armutlu was chosen as the district of Izmir.
     Given Enter Kurum, Kurum detay
     And user selects the Uyruk
     And user click hasta Turu
@@ -78,7 +78,7 @@ Feature: probel_hastaKayit
     And user writes Passport Id
     And user writes Passport No
     And user selects a gender
-    And user chooses ilçe
+    And user chooses ilce
     And user enters the mobile phone
     And user clicks on the save button
     And user assert the registration
@@ -90,8 +90,8 @@ Feature: probel_hastaKayit
     And user verifies the message "Bilgiler kaydedildi."
     And  user breaks down the popup to the TAMAM button
 
-  @TC0006 @Bug
-  Scenario: TC0006 - User can write their private names such as Mother Name, Father Name, Place of Birth in lower case
+  @TC0169 @Bug
+  Scenario: TC0169 - User can write their private names such as Mother Name, Father Name, Place of Birth in lower case
     Given Enter Kurum, Kurum detay
     When user selects the Uyruk
     And user click hasta Turu
@@ -116,8 +116,8 @@ Feature: probel_hastaKayit
 
 
 
-  @TC0007 @Bug @Smoke
-  Scenario:TC0007 - The user can register in the Foreign patient type "Tourist's Health" option on the Home page
+  @TC0170 @Bug @Smoke
+  Scenario:TC0170 - The user can register in the Foreign patient type "Tourist's Health" option on the Home page
     Given Enter Kurum, Kurum detay
     And user selects the Uyruk
     And user click hasta Turu
@@ -139,7 +139,7 @@ Feature: probel_hastaKayit
 
 
   @TC0045
-  Scenario:TC0045 - The user registers a patient in the type "TİKA TARAFINDAN GETİRİLEN HASTALAR"
+  Scenario:TR0171 - The user registers a patient in the type "TIKA TARAFINDAN GETIRILEN HASTALAR"
     Given Enter Kurum, Kurum detay
     And user selects the Uyruk SURİYE
     And user click hasta Turu
@@ -161,7 +161,7 @@ Feature: probel_hastaKayit
     And user chooses a profession
     And user selects the learning
     And user selects the blood type
-    And user chooses ilçe Aliaga
+    And user chooses ilce Aliaga
     And user clik Email button
     And user click kimlik fotokopisi alindi button
     And user click KVKK button
@@ -177,7 +177,7 @@ Feature: probel_hastaKayit
 
 
   @TC0046
-  Scenario:TC0046 - The user registers a patient in the type " TURİSTİN SAĞLIĞI"
+  Scenario:TR0172 - The user registers a patient in the type " TURİSTİN SAĞLIĞI"
     Given Enter Kurum, Kurum detay
     And user selects the Uyruk ALMANYA
     And user click hasta Turu
@@ -199,7 +199,7 @@ Feature: probel_hastaKayit
     And user chooses a profession
     And user selects the learning
     And user selects the blood type
-    And user chooses ilçe Aliaga
+    And user chooses ilce Aliaga
     And user clik Email button
     And user click kimlik fotokopisi alindi button
     And user click KVKK button
@@ -216,7 +216,7 @@ Feature: probel_hastaKayit
 
 
   @TC0047
-  Scenario:TC0047 - The user registers a patient in the type "TÜRK SOYLU YABANCILAR"
+  Scenario:TR0173 - The user registers a patient in the type "TÜRK SOYLU YABANCILAR"
     Given Enter Kurum, Kurum detay
     And user selects the Uyruk AZERBEYCAN
     And user click hasta Turu
@@ -238,7 +238,7 @@ Feature: probel_hastaKayit
     And user chooses a profession
     And user selects the learning
     And user selects the blood type
-    And user chooses ilçe Aliaga
+    And user chooses ilce Aliaga
     And user clik Email button
     And user click kimlik fotokopisi alindi button
     And user click KVKK button
@@ -254,7 +254,7 @@ Feature: probel_hastaKayit
 
 
   @TC0048 @Bug
-  Scenario:TC0048 - User registers with phone number in correct format
+  Scenario:TR0174 - User registers with phone number in correct format
     Given Enter Kurum, Kurum detay
     And user selects the Uyruk AZERBEYCAN
     And user click hasta Turu
@@ -276,7 +276,7 @@ Feature: probel_hastaKayit
     And user chooses a profession
     And user selects the learning
     And user selects the blood type
-    And user chooses ilçe Aliaga
+    And user chooses ilce Aliaga
     And user clik Email button
     And user click kimlik fotokopisi alindi button
     And user click KVKK button
@@ -292,7 +292,7 @@ Feature: probel_hastaKayit
 
 
   @TC0049 @Bug @Smoke
-  Scenario:TC0049 - User registers with name and surname in the appropriate format
+  Scenario:TR0175 - User registers with name and surname in the appropriate format
     Given Enter Kurum, Kurum detay
     And user selects the Uyruk AZERBEYCAN
     And user click hasta Turu
@@ -319,7 +319,7 @@ Feature: probel_hastaKayit
 
 
   @TC0050 @Bug @Smoke
-  Scenario:TC0050 - User registers with baba adı, anne adı and dogum yeri in the appropriate format
+  Scenario:TR0176 - User registers with baba adı, anne adı and dogum yeri in the appropriate format
     Given Enter Kurum, Kurum detay
     And user selects the Uyruk AZERBEYCAN
     And user click hasta Turu
@@ -518,19 +518,19 @@ Feature: probel_hastaKayit
 
 
   @TC0151
-  Scenario: TC0118 - "Tc" Kimlik no" error message verification
+  Scenario: TC0151 - "Tc" Kimlik no" error message verification
     Given Enter Kurum, Kurum detay
     Then click the Kaydet-F10- button
     And verify -Hasta Karti Düzenleme - T.C kimlik numarasi bos olamaz ...PROBEL!- message
 
   @TC0150
-  Scenario: TC0117 - "Passport no" and "Passport id" verification on the registration page
+  Scenario: TC0150 - "Passport no" and "Passport id" verification on the registration page
     Given Enter Kurum, Kurum detay
     Then select nationality uyruk -ABD (Amerika Birleşik D.)-
     And Verify that -Pasaport ıd- and -pasaport no- are in the page
 
   @TC0148
-  Scenario: TC0100 - Entering a future date of the newborn baby's baby birth week
+  Scenario: TC0148 - Entering a future date of the newborn baby's baby birth week
     Given Enter Kurum, Kurum detay
     Then make patient type SAGLİK TURİZMİ
     And Enter TC no
@@ -553,13 +553,13 @@ Feature: probel_hastaKayit
     Then Bilgiler Kaydedildi should be seen on Popup Alert on Muayene Kayit Page
 
   @TC0149
-  Scenario: TC0116 - verification of "Tahsis no" and "karne seri no" on the registration page
+  Scenario: TC0149 - verification of "Tahsis no" and "karne seri no" on the registration page
     Given Enter Kurum, Kurum detay
     Then select nationality -uyruk- -Almanya-
     And Verify that -Tahsis no- and -karne seri no- are in the page
 
   @TC0147
-  Scenario: TC0059 - the patient's mother's date of birth is a later date
+  Scenario: TC0147 - the patient's mother's date of birth is a later date
     Given Enter Kurum, Kurum detay
     Then -Anne doğum tarihi- enter a future date
     And select -Hasta Turu- -Kimliksiz hasta-
@@ -567,7 +567,7 @@ Feature: probel_hastaKayit
     And Hata message verifyy
 
   @TC0146
-  Scenario: TC0058 - Date of birth accepts a future date
+  Scenario: TC0146 - Date of birth accepts a future date
     Given Enter Kurum, Kurum detay
     Then click the -Yeni Doğan- button
     And Enter -Kişi bilgileri- -TC-,-Adi-,-Soyadi-,-cinsiyet-,-Baba Adi-,-Anne adi-,-Dogum yeri-,-Anne tc-
@@ -576,14 +576,14 @@ Feature: probel_hastaKayit
     And -Hata- message verify
 
   @TC0145
-  Scenario: TC0043 - city_county_validation
+  Scenario: TC0145 - city_county_validation
     Given Enter Kurum, Kurum detay
     Then Type -47- in the -İl- box
     And Double click the -İlce- box and check the popup
     And  Verify -oge sayisi"
 
   @TC0152
-  Scenario: TC0134 - foreign national patient registration
+  Scenario: TC0152 - foreign national patient registration
     Given Enter Kurum, Kurum detay
     Then select nationality uyruk -ANDORRA-
     And enter patient type -T.C. SAĞLIK BAKANLIĞI SAĞLIK VE TIP ALANINDA İKİLİ İŞ BİRLİĞİ ANLAŞMALARI KAPSAMINDAKİ HASTALAR-
@@ -600,7 +600,7 @@ Feature: probel_hastaKayit
     When -Bilgiler kaydedildi- massage veryfy
 
   @TC0153
-  Scenario: TC0135 - "yenidoğan" and"doğum tarihi" check
+  Scenario: TC0153 - "yenidoğan" and"doğum tarihi" check
     Given Enter Kurum, Kurum detay
     Given click the button Yeni Dogan
     When Enter a date beyond 30 days of birth
@@ -980,7 +980,7 @@ Feature: probel_hastaKayit
     Then User verifies that the message "emailWarningMessage" is displayed
 
   @TC0187
-  Scenario: TC0187"Yenidoğan" check box cannot be ticked for dual citizen type patients whose date of birth is past 30 days
+  Scenario: TC0187 "Yenidoğan" check box cannot be ticked for dual citizen type patients whose date of birth is past 30 days
     Given Enter Kurum, Kurum detay
     And User clicks Patient Type box and Choose Button on dual citizens
     And User chooses the "nationality_1"
