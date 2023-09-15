@@ -7,7 +7,7 @@ Feature: probel_hastaKayit
     And The user goes Hasta Islemleri, Ayaktan Hasta Islemleri and then click Poliklinik Muayene Kayit
     And Click the Hasta button
 
-  @TC0001 @Bug @Smoke
+  @TC0154 @Bug @Smoke
   Scenario: TC0001 - The user must not be able to enter a later date for your mother's date of birth
     Given Enter Kurum, Kurum detay
     And user selects the Uyruk
@@ -41,7 +41,7 @@ Feature: probel_hastaKayit
     And user verifies the message "Bilgiler kaydedildi."
     And  user breaks down the popup to the TAMAM button
 
-  @TC0002 @Bug
+  @TC0155 @Bug
   Scenario: TC0002 - Received an error "Passport No/Id" when the user entered an incorrect "Tahsis No/Id"
     Given Enter Kurum, Kurum detay
     And user selects the Uyruk
@@ -517,19 +517,19 @@ Feature: probel_hastaKayit
     And user registration verifies
 
 
-  @TC0118
+  @TC0151
   Scenario: TC0118 - "Tc" Kimlik no" error message verification
     Given Enter Kurum, Kurum detay
     Then click the Kaydet-F10- button
     And verify -Hasta Karti Düzenleme - T.C kimlik numarasi bos olamaz ...PROBEL!- message
 
-  @TC0117
+  @TC0150
   Scenario: TC0117 - "Passport no" and "Passport id" verification on the registration page
     Given Enter Kurum, Kurum detay
     Then select nationality uyruk -ABD (Amerika Birleşik D.)-
     And Verify that -Pasaport ıd- and -pasaport no- are in the page
 
-  @TC0100
+  @TC0148
   Scenario: TC0100 - Entering a future date of the newborn baby's baby birth week
     Given Enter Kurum, Kurum detay
     Then make patient type SAGLİK TURİZMİ
@@ -552,13 +552,13 @@ Feature: probel_hastaKayit
     And Click Kaydet button on Muayene Kayit Page
     Then Bilgiler Kaydedildi should be seen on Popup Alert on Muayene Kayit Page
 
-  @TC0116
+  @TC0149
   Scenario: TC0116 - verification of "Tahsis no" and "karne seri no" on the registration page
     Given Enter Kurum, Kurum detay
     Then select nationality -uyruk- -Almanya-
     And Verify that -Tahsis no- and -karne seri no- are in the page
 
-  @TC0059
+  @TC0147
   Scenario: TC0059 - the patient's mother's date of birth is a later date
     Given Enter Kurum, Kurum detay
     Then -Anne doğum tarihi- enter a future date
@@ -566,7 +566,7 @@ Feature: probel_hastaKayit
     And Enter -Kişi bilgileri- -TC-,-Adi-,-Soyadi-,-cinsiyet-,-Baba Adi-,-Anne adi-,-Dogum yeri-,-Anne tc-
     And Hata message verifyy
 
-  @TC0058
+  @TC0146
   Scenario: TC0058 - Date of birth accepts a future date
     Given Enter Kurum, Kurum detay
     Then click the -Yeni Doğan- button
@@ -575,14 +575,14 @@ Feature: probel_hastaKayit
     And -Kaydet- button click
     And -Hata- message verify
 
-  @TC0043
+  @TC0145
   Scenario: TC0043 - city_county_validation
     Given Enter Kurum, Kurum detay
     Then Type -47- in the -İl- box
     And Double click the -İlce- box and check the popup
     And  Verify -oge sayisi"
 
-  @TC0134
+  @TC0152
   Scenario: TC0134 - foreign national patient registration
     Given Enter Kurum, Kurum detay
     Then select nationality uyruk -ANDORRA-
@@ -599,7 +599,7 @@ Feature: probel_hastaKayit
     And -kaydett- button click
     When -Bilgiler kaydedildi- massage veryfy
 
-  @TC0135
+  @TC0153
   Scenario: TC0135 - "yenidoğan" and"doğum tarihi" check
     Given Enter Kurum, Kurum detay
     Given click the button Yeni Dogan
