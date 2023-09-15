@@ -8,7 +8,7 @@ Feature: probel_hastaKayit
     And Click the Hasta button
 
   @TC0154 @Bug @Smoke
-  Scenario: TC0001 - The user must not be able to enter a later date for your mother's date of birth
+  Scenario: TC0154 - The user must not be able to enter a later date for your mother's date of birth
     Given Enter Kurum, Kurum detay
     And user selects the Uyruk
     And user writes the name of the mother
@@ -42,7 +42,7 @@ Feature: probel_hastaKayit
     And  user breaks down the popup to the TAMAM button
 
   @TC0155 @Bug
-  Scenario: TC0002 - Received an error "Passport No/Id" when the user entered an incorrect "Tahsis No/Id"
+  Scenario: TC0155 - Received an error "Passport No/Id" when the user entered an incorrect "Tahsis No/Id"
     Given Enter Kurum, Kurum detay
     And user selects the Uyruk
     And user click hasta Turu
@@ -65,8 +65,8 @@ Feature: probel_hastaKayit
     And  user breaks down the popup to the TAMAM button
 
 
-  @TC0005 @Bug
-  Scenario: TR0168 - Armutlu was chosen as the district of Izmir.
+  @TC0168 @Bug
+  Scenario: TC0168 - Armutlu was chosen as the district of Izmir.
     Given Enter Kurum, Kurum detay
     And user selects the Uyruk
     And user click hasta Turu
@@ -90,8 +90,8 @@ Feature: probel_hastaKayit
     And user verifies the message "Bilgiler kaydedildi."
     And  user breaks down the popup to the TAMAM button
 
-  @TC0006 @Bug
-  Scenario: TR0169 - User can write their private names such as Mother Name, Father Name, Place of Birth in lower case
+  @TC0169 @Bug
+  Scenario: TC0169 - User can write their private names such as Mother Name, Father Name, Place of Birth in lower case
     Given Enter Kurum, Kurum detay
     When user selects the Uyruk
     And user click hasta Turu
@@ -116,8 +116,8 @@ Feature: probel_hastaKayit
 
 
 
-  @TC0007 @Bug @Smoke
-  Scenario:TR0170 - The user can register in the Foreign patient type "Tourist's Health" option on the Home page
+  @TC0170 @Bug @Smoke
+  Scenario:TC0170 - The user can register in the Foreign patient type "Tourist's Health" option on the Home page
     Given Enter Kurum, Kurum detay
     And user selects the Uyruk
     And user click hasta Turu
@@ -518,19 +518,19 @@ Feature: probel_hastaKayit
 
 
   @TC0151
-  Scenario: TC0118 - "Tc" Kimlik no" error message verification
+  Scenario: TC0151 - "Tc" Kimlik no" error message verification
     Given Enter Kurum, Kurum detay
     Then click the Kaydet-F10- button
     And verify -Hasta Karti Düzenleme - T.C kimlik numarasi bos olamaz ...PROBEL!- message
 
   @TC0150
-  Scenario: TC0117 - "Passport no" and "Passport id" verification on the registration page
+  Scenario: TC0150 - "Passport no" and "Passport id" verification on the registration page
     Given Enter Kurum, Kurum detay
     Then select nationality uyruk -ABD (Amerika Birleşik D.)-
     And Verify that -Pasaport ıd- and -pasaport no- are in the page
 
   @TC0148
-  Scenario: TC0100 - Entering a future date of the newborn baby's baby birth week
+  Scenario: TC0148 - Entering a future date of the newborn baby's baby birth week
     Given Enter Kurum, Kurum detay
     Then make patient type SAGLİK TURİZMİ
     And Enter TC no
@@ -553,13 +553,13 @@ Feature: probel_hastaKayit
     Then Bilgiler Kaydedildi should be seen on Popup Alert on Muayene Kayit Page
 
   @TC0149
-  Scenario: TC0116 - verification of "Tahsis no" and "karne seri no" on the registration page
+  Scenario: TC0149 - verification of "Tahsis no" and "karne seri no" on the registration page
     Given Enter Kurum, Kurum detay
     Then select nationality -uyruk- -Almanya-
     And Verify that -Tahsis no- and -karne seri no- are in the page
 
   @TC0147
-  Scenario: TC0059 - the patient's mother's date of birth is a later date
+  Scenario: TC0147 - the patient's mother's date of birth is a later date
     Given Enter Kurum, Kurum detay
     Then -Anne doğum tarihi- enter a future date
     And select -Hasta Turu- -Kimliksiz hasta-
@@ -567,7 +567,7 @@ Feature: probel_hastaKayit
     And Hata message verifyy
 
   @TC0146
-  Scenario: TC0058 - Date of birth accepts a future date
+  Scenario: TC0146 - Date of birth accepts a future date
     Given Enter Kurum, Kurum detay
     Then click the -Yeni Doğan- button
     And Enter -Kişi bilgileri- -TC-,-Adi-,-Soyadi-,-cinsiyet-,-Baba Adi-,-Anne adi-,-Dogum yeri-,-Anne tc-
@@ -576,14 +576,14 @@ Feature: probel_hastaKayit
     And -Hata- message verify
 
   @TC0145
-  Scenario: TC0043 - city_county_validation
+  Scenario: TC0145 - city_county_validation
     Given Enter Kurum, Kurum detay
     Then Type -47- in the -İl- box
     And Double click the -İlce- box and check the popup
     And  Verify -oge sayisi"
 
   @TC0152
-  Scenario: TC0134 - foreign national patient registration
+  Scenario: TC0152 - foreign national patient registration
     Given Enter Kurum, Kurum detay
     Then select nationality uyruk -ANDORRA-
     And enter patient type -T.C. SAĞLIK BAKANLIĞI SAĞLIK VE TIP ALANINDA İKİLİ İŞ BİRLİĞİ ANLAŞMALARI KAPSAMINDAKİ HASTALAR-
@@ -600,7 +600,7 @@ Feature: probel_hastaKayit
     When -Bilgiler kaydedildi- massage veryfy
 
   @TC0153
-  Scenario: TC0135 - "yenidoğan" and"doğum tarihi" check
+  Scenario: TC0153 - "yenidoğan" and"doğum tarihi" check
     Given Enter Kurum, Kurum detay
     Given click the button Yeni Dogan
     When Enter a date beyond 30 days of birth
@@ -853,7 +853,7 @@ Feature: probel_hastaKayit
     Then Registered patient should be seen on Detayli Hasta Arama Page
 
   @TC0177
-  Scenario:TC0090 User should enter "Kurumu" and "Kurum Detay" information for registration
+  Scenario:TC0177 User should enter "Kurumu" and "Kurum Detay" information for registration
     Given User chooses the "nationality_1"
     And User clicks Patient Type box and Choose Button on dual citizens
     And User clicks Gender box and chooses the "gender_1"
@@ -862,7 +862,7 @@ Feature: probel_hastaKayit
     Then User verifies that the message "institutionInformationWarningMessage" is displayed
 
   @TC0178
-  Scenario: TC0091 the User should be able to register the patient whose nationality is Turkey with TC information
+  Scenario: TC0178 the User should be able to register the patient whose nationality is Turkey with TC information
     Given Enter Kurum, Kurum detay
     And User clicks Patient Type box and Choose Button on dual citizens
     And User enters "surname" in surname box
@@ -885,7 +885,7 @@ Feature: probel_hastaKayit
     Then User verifies that the patient is enrolled
 
   @TC0179
-  Scenario: TC0092 User should be able to register with Pasport Id and Pasport No whose nationality is outside of Turkey
+  Scenario: TC0179 User should be able to register with Pasport Id and Pasport No whose nationality is outside of Turkey
     Given Enter Kurum, Kurum detay
     And User chooses the "nationality_1"
     And User clicks Patient Type box and Choose Button on dual citizens
@@ -909,13 +909,13 @@ Feature: probel_hastaKayit
     Then User verifies that the patient is enrolled
 
   @TC0180 @Bug
-  Scenario: TC0093 The pasport Number should be requested for the registiration of patients whose nationality is outside of Turkey
+  Scenario: TC0180 The pasport Number should be requested for the registiration of patients whose nationality is outside of Turkey
     Given User chooses the "nationality_2"
     And User clicks Patient Type box and Choose Button on dual citizens
     Then User verifies that Passport Id and No is requested
 
   @TC0181
-  Scenario: TC0094 User should enter mother T.C. Number whose age is less than 6 months and nationality is outside of Turkey
+  Scenario: TC0181 User should enter mother T.C. Number whose age is less than 6 months and nationality is outside of Turkey
     Given Enter Kurum, Kurum detay
     And User clicks Patient Type box and Choose Button on dual citizens
     And User chooses the "nationality_1"
@@ -927,7 +927,7 @@ Feature: probel_hastaKayit
     Then User verifies that the message "motherTCWarningMessage" is displayed
 
   @TC0182
-  Scenario:TC0095 User should enter "Cep Telefonu" information for registration whose nationality is Turkey
+  Scenario:TC0182 User should enter "Cep Telefonu" information for registration whose nationality is Turkey
     Given Enter Kurum, Kurum detay
     And User clicks Patient Type box and Choose Button on dual citizens
     And User enters "surname" in surname box
@@ -938,7 +938,7 @@ Feature: probel_hastaKayit
     Then User verifies that the message "phoneNumberWarningMessage" is displayed
 
   @TC0183
-  Scenario: TC0096 User should not enter The pasaport Id and Pasaport No less than 5 characters for the registiration of patients whose nationality is outside of Turkey
+  Scenario: TC0183 User should not enter The pasaport Id and Pasaport No less than 5 characters for the registiration of patients whose nationality is outside of Turkey
     Given Enter Kurum, Kurum detay
     And User clicks Patient Type box and Choose Button on dual citizens
     And User chooses the "nationality_1"
@@ -948,7 +948,7 @@ Feature: probel_hastaKayit
     Then User verifies that the message "fiveChrWarningMessage" is displayed
 
   @TC0184
-  Scenario: TC0097 User should enter "Dogum T." information for registration whose nationality is outside of Turkey
+  Scenario: TC0184 User should enter "Dogum T." information for registration whose nationality is outside of Turkey
     Given Enter Kurum, Kurum detay
     And User clicks Patient Type box and Choose Button on dual citizens
     And User enters "MobilePhoneNumber" in mobile phone number box
@@ -958,7 +958,7 @@ Feature: probel_hastaKayit
     Then User verifies that the message "dateBirthWarningMessage" is displayed
 
   @TC0186
-  Scenario: TC0098 User should enter "Cinsiyeti" information for registration whose nationality is outside of Turkey
+  Scenario: TC0186 User should enter "Cinsiyeti" information for registration whose nationality is outside of Turkey
     Given Enter Kurum, Kurum detay
     And User clicks Patient Type box and Choose Button on dual citizens
     And User enters "MobilePhoneNumber" in mobile phone number box
@@ -969,7 +969,7 @@ Feature: probel_hastaKayit
     Then User verifies that the message "genderWarningMessage" is displayed
 
   @TC0185
-  Scenario: TC0099 User should enter "E-mail" when "E-mail Gönderilebilir" checkbox is ticked
+  Scenario: TC0185 User should enter "E-mail" when "E-mail Gönderilebilir" checkbox is ticked
     Given Enter Kurum, Kurum detay
     And User clicks Patient Type box and Choose Button on dual citizens
     And User chooses the "nationality_1"
@@ -980,7 +980,7 @@ Feature: probel_hastaKayit
     Then User verifies that the message "emailWarningMessage" is displayed
 
   @TC0187
-  Scenario: TC0105 "Yenidoğan" check box cannot be ticked for dual citizen type patients whose date of birth is past 30 days
+  Scenario: TC0187 "Yenidoğan" check box cannot be ticked for dual citizen type patients whose date of birth is past 30 days
     Given Enter Kurum, Kurum detay
     And User clicks Patient Type box and Choose Button on dual citizens
     And User chooses the "nationality_1"
@@ -993,7 +993,7 @@ Feature: probel_hastaKayit
     Then User verifies that the message "newbornWarningMessage" is displayed
 
   @TC0188
-  Scenario: TC0106 For the newborn dual citizen patient, It is obligatory to enter birth week and birth day
+  Scenario: TC0188 For the newborn dual citizen patient, It is obligatory to enter birth week and birth day
     Given Enter Kurum, Kurum detay
     And User clicks Patient Type box and Choose Button on dual citizens
     And User chooses the "nationality_1"
@@ -1006,7 +1006,7 @@ Feature: probel_hastaKayit
     Then User verifies that the message "birthWeekWarningMessage" is displayed
 
   @TC0189 @Bug
-  Scenario: TC0107 The patient's date of birth cannot be later than today
+  Scenario: TC0189 The patient's date of birth cannot be later than today
     Given Enter Kurum, Kurum detay
     And User clicks Patient Type box and Choose Button on dual citizens
     And User chooses the "nationality_1"
@@ -1031,7 +1031,7 @@ Feature: probel_hastaKayit
     Then User verifies that the patient is not enrolled
 
   @TC0190 @Bug
-  Scenario: TC0108 User cannot register a patient by ticked bluecardButton who is dual citizen
+  Scenario: TC0190 User cannot register a patient by ticked bluecardButton who is dual citizen
     Given Enter Kurum, Kurum detay
     And User clicks Patient Type box and Choose Button on dual citizens
     And User chooses the "nationality_1"
@@ -1056,21 +1056,21 @@ Feature: probel_hastaKayit
     Then User verifies that the patient is not enrolled
 
   @TC0191
-  Scenario: TC0109 When the newborn checkbox is checked , the fields of "Dogum Sırası" , "Haftasi","Gunu" are becomes active
+  Scenario: TC0191 When the newborn checkbox is checked , the fields of "Dogum Sırası" , "Haftasi","Gunu" are becomes active
     Given Enter Kurum, Kurum detay
     And User clicks Patient Type box and Choose Button on dual citizens
     And User ticks the newborn checkedbox
     Then Assert that birtDay and birthOrder searchBoxes are display
 
   @TC0192
-  Scenario: TC0110 Card owner field becomes active When something other than itself is selected in the "Yakinligi" tab
+  Scenario: TC0192 Card owner field becomes active When something other than itself is selected in the "Yakinligi" tab
     Given Enter Kurum, Kurum detay
     And User clicks Patient Type box and Choose Button on dual citizens
     And User clicks yakinligi and chooses mother
     Then Assert that cardOwner searchBox is display
 
   @TC0193
-  Scenario: TC0114 User should be able to clear the patient's information by ckick on "Ekranı Temizle" button
+  Scenario: TC0193 User should be able to clear the patient's information by ckick on "Ekranı Temizle" button
     Given Enter Kurum, Kurum detay
     And User clicks Patient Type box and Choose Button on dual citizens
     And User enters "surname" in surname box
@@ -1081,7 +1081,7 @@ Feature: probel_hastaKayit
     Then Assert that the page is clear
 
   @TC0194 @Bug
-  Scenario: TC0115 When "yenidoğan" is ticked The tab of "Dogum Sırası" should be at least 1 whose nationality is outside of Turkey
+  Scenario: TC0194 When "yenidoğan" is ticked The tab of "Dogum Sırası" should be at least 1 whose nationality is outside of Turkey
     Given Enter Kurum, Kurum detay
     And User clicks Patient Type box and Choose Button on dual citizens
     And User chooses the "nationality_1"
@@ -1108,7 +1108,7 @@ Feature: probel_hastaKayit
     Then User verifies that the patient is not enrolled
 
   @TC0195
-  Scenario: TC0123  User should be able to register with Passport Id and Passport No whose nationality is outside of Turkey
+  Scenario: TC0195  User should be able to register with Passport Id and Passport No whose nationality is outside of Turkey
     Given Enter Kurum, Kurum detay
     And User chooses the "nationality_1"
     And User clicks Patient Type box and Choose Button on Coming for Education and their obligations
@@ -1132,7 +1132,7 @@ Feature: probel_hastaKayit
     Then User verifies that the patient is enrolled
 
   @TC0196 @Bug
-  Scenario: TC0124 The pasport Number should be requested for the registiration of patients whose nationality is outside of Turkey
+  Scenario: TC0196 The pasport Number should be requested for the registiration of patients whose nationality is outside of Turkey
     Given User chooses the "nationality_2"
     And User clicks Patient Type box and Choose Button on Coming for Education and their obligations
     Then User verifies that Passport Id and No is requested
@@ -1145,7 +1145,7 @@ Feature: probel_hastaKayit
     Then Assert that birtDay and birthOrder searchBoxes are display
 
   @TC0197
-  Scenario: TC0127 When "SMS Gönderilebilir" checkbox is checked, it should warn if mobile phone information is not entered
+  Scenario: TC0197 When "SMS Gönderilebilir" checkbox is checked, it should warn if mobile phone information is not entered
     Given User clicks Patient Type box and Choose Button on Coming for Education and their obligations
     And User chooses the "nationality_1"
     And User enters "validPassportId" and "validPassportNo"
@@ -1162,14 +1162,14 @@ Feature: probel_hastaKayit
     Then User verifies that the message "phoneNumberWarningMessage" is displayed
 
   @TC0198
-  Scenario: TC0128 If T.C. Number is invalid , application should give the message of "Geçerli bir kimlik numarası giriniz "
+  Scenario: TC0198 If T.C. Number is invalid , application should give the message of "Geçerli bir kimlik numarası giriniz "
     Given User clicks Patient Type box and Choose Button on Coming for Education and their obligations
     And User enters "inValidTCID" in TC ID box
     And User clicks the Save button
     Then User verifies that the message "ValidTCWarningMessage" is displayed
 
   @TC0199
-  Scenario: TC0129 Email information should contain " @ "
+  Scenario: TC0199 Email information should contain " @ "
     Given Enter Kurum, Kurum detay
     And User clicks Patient Type box and Choose Button on Coming for Education and their obligations
     And User chooses the "nationality_1"
