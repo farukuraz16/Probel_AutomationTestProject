@@ -67,7 +67,7 @@ Feature: probel_hastaKayit
     Then user closes the application
 
 
-  @TC0005 @Bug
+  @TR0168 @Bug
   Scenario: TR0168 - Armutlu was chosen as the district of Izmir.
     Given Enter Kurum, Kurum detay
     And user selects the Uyruk
@@ -93,7 +93,7 @@ Feature: probel_hastaKayit
     And  user breaks down the popup to the TAMAM button
     Then user closes the application
 
-  @TC0006 @Bug
+  @TR0169 @Bug
   Scenario: TR0169 - User can write their private names such as Mother Name, Father Name, Place of Birth in lower case
     Given Enter Kurum, Kurum detay
     When user selects the Uyruk
@@ -118,7 +118,7 @@ Feature: probel_hastaKayit
     And  user breaks down the popup to the TAMAM button
     Then user closes the application
 
-  @TC0007 @Bug @Smoke
+  @TR0170 @Bug @Smoke
   Scenario:TR0170 - The user can register in the Foreign patient type "Tourist's Health" option on the Home page
     Given Enter Kurum, Kurum detay
     And user selects the Uyruk
@@ -140,7 +140,7 @@ Feature: probel_hastaKayit
     And user assert the registration
     Then user closes the application
 
-  @TC0045
+  @TR0171
   Scenario:TR0171 - The user registers a patient in the type "TIKA TARAFINDAN GETIRILEN HASTALAR"
     Given Enter Kurum, Kurum detay
     And user selects the Uyruk SURİYE
@@ -178,7 +178,7 @@ Feature: probel_hastaKayit
     And  user breaks down the popup to the TAMAM button
     Then user closes the application
 
-  @TC0046
+  @TR0172
   Scenario:TR0172 - The user registers a patient in the type " TURİSTİN SAĞLIĞI"
     Given Enter Kurum, Kurum detay
     And user selects the Uyruk ALMANYA
@@ -217,7 +217,7 @@ Feature: probel_hastaKayit
     Then user closes the application
 
 
-  @TC0047
+  @TR0173
   Scenario:TR0173 - The user registers a patient in the type "TÜRK SOYLU YABANCILAR"
     Given Enter Kurum, Kurum detay
     And user selects the Uyruk AZERBEYCAN
@@ -255,7 +255,7 @@ Feature: probel_hastaKayit
     And  user breaks down the popup to the TAMAM button
     Then user closes the application
 
-  @TC0048 @Bug
+  @TR0174 @Bug
   Scenario:TR0174 - User registers with phone number in correct format
     Given Enter Kurum, Kurum detay
     And user selects the Uyruk AZERBEYCAN
@@ -293,7 +293,7 @@ Feature: probel_hastaKayit
     And  user breaks down the popup to the TAMAM button
     Then user closes the application
 
-  @TC0049 @Bug @Smoke
+  @TR0175 @Bug @Smoke
   Scenario:TR0175 - User registers with name and surname in the appropriate format
     Given Enter Kurum, Kurum detay
     And user selects the Uyruk AZERBEYCAN
@@ -320,7 +320,7 @@ Feature: probel_hastaKayit
     Then user closes the application
 
 
-  @TC0050 @Bug @Smoke
+  @TR0176 @Bug @Smoke
   Scenario:TR0176 - User registers with baba adı, anne adı and dogum yeri in the appropriate format
     Given Enter Kurum, Kurum detay
     And user selects the Uyruk AZERBEYCAN
