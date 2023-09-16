@@ -669,6 +669,8 @@ public class ServiceRegistration_Page {
         // js.executeScript("arguments[0].scrollIntoView(true);", inspectFirstService_button);
         ReusableMethods.waitFor(2);
         ReusableMethods.jseWithClick(Driver.getDriver(), inspectFirstService_button);
+        ReusableMethods.waitFor(3);
+
         //inspectFirstService_button.click();
     }
 
