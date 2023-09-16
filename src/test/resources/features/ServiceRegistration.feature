@@ -41,7 +41,7 @@ Feature: The Home Page of Service Register
     Then assert the second invalid patient number warning message
 
   @TC0203
-  Scenario:TC0203 - The system must not allow to user to insert the any character except numbers in the box of TC identity number
+  Scenario: TC0203 - The system must not allow to user to insert the any character except numbers in the box of TC identity number
 
   @TC0204 @Smoke
   Scenario: TC0204 - The user can display the registered patient with protocol number
