@@ -7,7 +7,7 @@ Feature: probel_hastaKayit
     And The user goes Hasta Islemleri, Ayaktan Hasta Islemleri and then click Poliklinik Muayene Kayit
     And Click the Hasta button
 
-  @TC0154 @Bug @Smoke
+  @TC0154 @US_001 @Bug @Smoke
   Scenario: TC0154 - The user must not be able to enter a later date for your mother's date of birth
     Given Enter Kurum, Kurum detay
     And user selects the Uyruk
@@ -41,7 +41,7 @@ Feature: probel_hastaKayit
     And user verifies the message "Bilgiler kaydedildi."
     And  user breaks down the popup to the TAMAM button
 
-  @TC0155 @Bug
+  @TC0155 @US_001 @Bug
   Scenario: TC0155 - Received an error "Passport No/Id" when the user entered an incorrect "Tahsis No/Id"
     Given Enter Kurum, Kurum detay
     And user selects the Uyruk
