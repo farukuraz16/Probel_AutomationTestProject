@@ -40,9 +40,6 @@ Feature: The Home Page of Service Register
     And press enter
     Then assert the second invalid patient number warning message
 
-  @TC0203 @US_002
-  Scenario: TC0203 - The system must not allow to user to insert the any character except numbers in the box of TC identity number
-
   @TC0204 @US_002 @Smoke
   Scenario: TC0204 - The user can display the registered patient with protocol number
     When click on query button
@@ -235,7 +232,7 @@ Feature: The Home Page of Service Register
     And press enter
     And continue if
     And click the check box of HstTer
-    And select new service "114"
+    And select new service "118"
     And select the assistant "777"
     And select the CgrTipiNo "16"
     And insert the description "abeyis automation test"
