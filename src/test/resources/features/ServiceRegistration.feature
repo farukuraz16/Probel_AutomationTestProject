@@ -284,7 +284,7 @@ Feature: The Home Page of Service Register
     When click on check box SaglikKuruluSevk
     Then assert the SaglikKuruluSevk check box was checked
 
-  @TC0224 @US_002
+  @TC0224 @US_002 @bug
   Scenario: TC0224 - The user can display and update additional information about patient (acceptance)
     When click on acceptance information button
     Then assert the acceptance information section
