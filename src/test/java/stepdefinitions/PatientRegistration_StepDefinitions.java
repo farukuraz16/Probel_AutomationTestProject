@@ -6,7 +6,9 @@ import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
@@ -20,6 +22,9 @@ import utilities.ReusableMethods;
 import java.text.ParseException;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
 
 public class PatientRegistration_StepDefinitions {
     BasePage basePage = new BasePage();
@@ -486,7 +491,7 @@ public class PatientRegistration_StepDefinitions {
     @Given("user selects the date of birth newborn")
     public void user_selects_the_date_of_birth_newborn() throws InterruptedException {
         hkp.dogumTarihiSearchBox.click();
-        hkp.dogumTarihiSearchBox.sendKeys("17.08.2023");
+        hkp.bebekDogumGunuBugun.click();
         hkp.dateCloseButton.click();
         Thread.sleep(1000);
 
@@ -545,7 +550,7 @@ public class PatientRegistration_StepDefinitions {
     @Given("user enters the mobile phone")
     public void user_enters_the_mobile_phone() throws InterruptedException {
         hkp.ceptelefonu.click();
-        hkp.ceptelefonu.sendKeys("5423456789");
+        hkp.ceptelefonu.sendKeys("5423454567");
         Thread.sleep(1000);
 
     }
@@ -627,7 +632,7 @@ public class PatientRegistration_StepDefinitions {
 
     @Given("user assert issue message")
     public void user_assert_issue_message() {
-        org.junit.Assert.assertTrue(hkp.passaportKimliksizVatansiz.isDisplayed());
+        org.junit.Assert.assertFalse(hkp.passaportKimliksizVatansiz.isDisplayed());
     }
 
     @Given("user select Gelis sekli")
@@ -667,10 +672,37 @@ public class PatientRegistration_StepDefinitions {
     public void user_close_the_message_bilgiler_kaydedildi() {
         hkp.muayeneKayitClose.click();
     }
+    @Given("user registration verifies for Svaziland")
+    public void user_registration_verifies_for_svaziland() {
+        if (hkp.lastProtocolNo.isDisplayed()) {
+            System.out.println("Svaziland isimli bir ülke yoktur");
+            throw new AssertionError("Svaziland isimli bir ülke yoktur");
+        }
+    }
+
+    @Given("user registration verifies for ??L?")
+    public void user_registration_verifies_for_l() {
+        if (hkp.lastProtocolNo.isDisplayed()) {
+            System.out.println("??L? isimli bir ülke yoktur");
+            throw new AssertionError("??L? isimli bir ülke yoktur");
+        }
+    }
+    @Given("user registration verifies with tahsis no for Germany")
+    public void user_registration_verifies_with_tahsis_no_for_germany() {
+        Assert.assertFalse(hkp.lastProtocolNo.isDisplayed());
+    }
 
     @Given("user registration verifies")
     public void user_registration_verifies() {
+        Assert.assertTrue(hkp.lastProtocolNo.isDisplayed());
+    }
 
+    @Given("user registration verifies for seysel")
+    public void user_registration_verifies_for_seysel() {
+        if (hkp.lastProtocolNo.isDisplayed()) {
+            System.out.println("Seysel isimli bir ülke yoktur");
+            throw new AssertionError("Seysel isimli bir ülke yoktur");
+        }
     }
 
     @Given("user enters the TC number of mother")
@@ -702,7 +734,17 @@ public class PatientRegistration_StepDefinitions {
 
     @Given("user assert that the options in the list are unique")
     public void user_assert_that_the_options_in_the_list_are_unique() {
-        org.junit.Assert.assertTrue(hkp.basvuruSekliSelect.isSelected());
+        List<WebElement> options = hkp.basvuruSekliDropdown.findElements(By.tagName("option"));
+
+        Set<String> optionValues = new HashSet<>();
+
+        for (WebElement option : options) {
+            optionValues.add(option.getText());
+        }
+
+        if (optionValues.size() != options.size()) {
+            throw new AssertionError("There are duplicate options in the dropdown list.");
+        }
     }
     @When("Click the Hasta button")
     public void click_the_hasta_button() {
@@ -1428,4 +1470,11 @@ public class PatientRegistration_StepDefinitions {
     public void userEntersValidTCIDInTCIDBox() {
         hkp.TCsearchBox.sendKeys(ReusableMethods.generateValidId());
     }
+
+    @Given("user assert the islem basarili")
+    public void user_assert_the_islem_basarili() {
+      Assert.assertFalse(hkp.islembasarili.isDisplayed());
+    }
 }
+
+
