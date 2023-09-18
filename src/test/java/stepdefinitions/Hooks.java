@@ -22,7 +22,7 @@ public class Hooks {
         Driver.getDriver().get(ConfigReader.getProperty("probel_WebUrl"));
 
         System.out.println("scenario started");
-       // System.out.println("scenario id =" + scenario.getId());
+        // System.out.println("scenario id =" + scenario.getId());
         System.out.println("scenario name =" + scenario.getName());
 
 

@@ -12,31 +12,29 @@ public class Driver {
     private static WebDriver driver;
 
 
-    public static WebDriver getDriver(){
+    public static WebDriver getDriver() {
 
-        if (driver==null){
-            switch (ConfigReader.getProperty("browser")){
+        if (driver == null) {
+            switch (ConfigReader.getProperty("browser")) {
 
                 case "chrome":
-
-
-
                     driver = new ChromeDriver();
                     break;
+
                 case "headlesschrome":
                     ChromeOptions options = new ChromeOptions();
                     options.addArguments("--headless=new");
                     driver = new ChromeDriver(options);
                     break;
+
                 case "firefox":
-
-                    driver =new FirefoxDriver();
+                    driver = new FirefoxDriver();
                     break;
-                case "edge":
 
+                case "edge":
                     driver = new EdgeDriver();
                     break;
-                    //case "chrome":
+                //case "chrome":
                 //    WebDriverManager.chromedriver().setup();
                 //    ChromeOptions co = new ChromeOptions();
                 //    co.addArguments("--remote-allow-origins=*");
@@ -50,11 +48,11 @@ public class Driver {
         }
         return driver;
     }
-    public static void closeDriver(){
-        if (driver!=null){
+
+    public static void closeDriver() {
+        if (driver != null) {
             driver.close();
-            driver=null;
+            driver = null;
         }
     }
 }
-
