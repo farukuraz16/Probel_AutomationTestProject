@@ -606,8 +606,8 @@ Feature: probel_hastaKayit
     And -Kaydet- button click
     And -Dogum tarihi 30 günü gecmis hastalar icin yenidogan secenegi isaretlenemez..!- veryfy
 
-  @TC0030
-  Scenario: TC0030 Patient registration should be done with valid patient data (Kimliksiz Hasta)
+  @TC0237 @smoke
+  Scenario: TC0237 Patient registration should be done with valid patient data (Kimliksiz Hasta)
     Given Enter Kurum, Kurum detay
     When Select Kimliksiz Hasta from   Hasta Turu drop down menu on Hasta Kayit Page
     And Write a valid Cep Telefonu on Hasta Kayit Page
@@ -625,8 +625,8 @@ Feature: probel_hastaKayit
     And Bilgiler Kaydedildi alert should be seen on Popup Alert on Muayene Kayit Page
     Then Registered patient should be seen on Detayli Hasta Arama Page
 
-  @TC0076
-  Scenario: TC0076 Patient registration should be done with minimum required data about patient (Kimliksiz Hasta)
+  @TC0236 @smoke
+  Scenario: TC0236 Patient registration should be done with minimum required data about patient (Kimliksiz Hasta)
     Given Enter Kurum, Kurum detay
     When Select Kimliksiz Hasta from   Hasta Turu drop down menu on Hasta Kayit Page
     And Write a valid Cep Telefonu on Hasta Kayit Page
@@ -642,8 +642,8 @@ Feature: probel_hastaKayit
     And Click Kaydet button from on Muayene Kayit Page
     Then Bilgiler Kaydedildi alert should be seen on Popup Alert on Muayene Kayit Page
 
-  @TC0077
-  Scenario: TC0077 Patient registration shouldnt be done with a future Birthday Date (Kimliksiz Hasta)
+  @TC0235 @bug @smoke
+  Scenario: TC0235 Patient registration shouldnt be done with a future Birthday Date (Kimliksiz Hasta)
     Given Enter Kurum, Kurum detay
     When Select Kimliksiz Hasta from   Hasta Turu drop down menu on Hasta Kayit Page
     And Write a valid Cep Telefonu on Hasta Kayit Page
@@ -655,8 +655,8 @@ Feature: probel_hastaKayit
     And Click Kaydet button on Hasta Kayit Page
     Then Islem Basarili   shouldnt be seen on popoup on Hasta Kayit Page
 
-  @TC0136
-  Scenario: TC0136 Patient registration shouldn't be done without a valid name and a lastname (Kimliksiz Hasta)
+  @TC0238 @bug
+  Scenario: TC0238 Patient registration shouldn't be done without a valid name and a lastname (Kimliksiz Hasta)
     Given Enter Kurum, Kurum detay
     When Select Kimliksiz Hasta from   Hasta Turu drop down menu on Hasta Kayit Page
     And Write a valid Cep Telefonu on Hasta Kayit Page
@@ -665,8 +665,8 @@ Feature: probel_hastaKayit
     And Click Kaydet button on Hasta Kayit Page
     Then Islem Basarili   shouldnt be seen on popoup on Hasta Kayit Page
 
-  @TC0078
-  Scenario: TC0078 Newborn Patient registration to Yetiskin Poliklinik shouldnt be done (Kimliksiz Hasta).
+  @TC0234
+  Scenario: TC0234 Newborn Patient registration to Yetiskin Poliklinik shouldnt be done (Kimliksiz Hasta).
     Given Enter Kurum, Kurum detay
     When Select Kimliksiz Hasta from   Hasta Turu drop down menu on Hasta Kayit Page
     And Write a valid Cep Telefonu on Hasta Kayit Page
@@ -683,8 +683,8 @@ Feature: probel_hastaKayit
     And Click Kaydet button from on Muayene Kayit Page
     Then Bilgiler Kaydedildi shouldnt be seen on Popup Alert on Muayene Kayit Page
 
-  @TC0086
-  Scenario: TC0086 Only letters and space character should be written in the first and last name section (Kimliksiz Hasta)
+  @TC0232
+  Scenario: TC0232 Only letters and space character should be written in the first and last name section (Kimliksiz Hasta)
     Given Enter Kurum, Kurum detay
     When Select Kimliksiz Hasta from   Hasta Turu drop down menu on Hasta Kayit Page
     And Write a valid Cep Telefonu on Hasta Kayit Page
@@ -695,8 +695,8 @@ Feature: probel_hastaKayit
     And Click Kaydet button on Hasta Kayit Page
     Then Islem Basarili   shouldnt be seen on popoup on Hasta Kayit Page
 
-  @TC0079
-  Scenario:  TC0079 Only women patients can be registered to KADIN DOGUM POLIKLINIK
+  @TC0233
+  Scenario:  TC0233 Only women patients can be registered to KADIN DOGUM POLIKLINIK
     Given Enter Kurum, Kurum detay
     When Select Kimliksiz Hasta from   Hasta Turu drop down menu on Hasta Kayit Page
     And Write a valid Cep Telefonu on Hasta Kayit Page
@@ -709,8 +709,8 @@ Feature: probel_hastaKayit
     When Select  Poliklinik as KADIN DOĞUM on Muayene Kayit Page
     Then An alert should be seen on Muayene Kayit Page
 
-  @TC0137
-  Scenario: TC0137 If nationality is different from Türkiye,
+  @TC0239 @bug
+  Scenario: TC0239 If nationality is different from Türkiye,
   then Passport Id and Passport Number box shouldn't be active
     Given Enter Kurum, Kurum detay
     When Select Kimliksiz Hasta from   Hasta Turu drop down menu on Hasta Kayit Page
@@ -722,8 +722,8 @@ Feature: probel_hastaKayit
       | TOGO                       |
 
 
-  @TC0138
-  Scenario: TC0138 If Nationality  is selected as Türkiye, Mavikart shouldn't be clickable (Kimliksiz Hasta)
+  @TC0240 @bug
+  Scenario: TC0240 If Nationality  is selected as Türkiye, Mavikart shouldn't be clickable (Kimliksiz Hasta)
     Given Enter Kurum, Kurum detay
     When Select Kimliksiz Hasta from   Hasta Turu drop down menu on Hasta Kayit Page
     And click Mavikart checkbox on Hasta Kayit Page
@@ -733,8 +733,8 @@ Feature: probel_hastaKayit
     And Click Kaydet button on Hasta Kayit Page
     Then Islem Basarili   shouldnt be seen on popoup on Hasta Kayit Page
 
-  @TC0139
-  Scenario: TC0139 If Yenidogan checkbox is selected then only positive integers should be written to Dogumsirasi
+  @TC0241 @bug
+  Scenario: TC0241 If Yenidogan checkbox is selected then only positive integers should be written to Dogumsirasi
     Given Enter Kurum, Kurum detay
     When Select Kimliksiz Hasta from   Hasta Turu drop down menu on Hasta Kayit Page
     And Select a valid Dogum Tarihi on Hasta Kayit Page
@@ -747,8 +747,8 @@ Feature: probel_hastaKayit
       | -2     |
       | 3      |
 
-  @TC0102
-  Scenario: TC0102 If E-mail Gönderilebilir box is  checked  then
+  @TC0259 @smoke
+  Scenario: TC0259 If E-mail Gönderilebilir box is  checked  then
   E-mail box should be active and a valid email should be accepted (Kimliksiz Hasta)
     Given Enter Kurum, Kurum detay
     When Select Kimliksiz Hasta from   Hasta Turu drop down menu on Hasta Kayit Page
@@ -767,8 +767,8 @@ Feature: probel_hastaKayit
       | @gmail.com       |
       | a     @gmail.com |
 
-  @TC0140
-  Scenario: TC0140 newborn  cannot be clicked for a patient whose age is older than 30 days (Kimliksiz Hasta)
+  @TC0242 @bug
+  Scenario: TC0242 newborn  cannot be clicked for a patient whose age is older than 30 days (Kimliksiz Hasta)
     Given Enter Kurum, Kurum detay
     When Select Kimliksiz Hasta from   Hasta Turu drop down menu on Hasta Kayit Page
     And Write a valid Cep Telefonu on Hasta Kayit Page
@@ -788,8 +788,8 @@ Feature: probel_hastaKayit
       | 02.08.2030 |
       | 15.08.2040 |
 
-  @TC0141
-  Scenario: TC0141  The Age of The Mother cannot be smaller than 15 (Kimliksiz Hasta)
+  @TC0243 @bug @smoke
+  Scenario: TC0243  The Age of The Mother cannot be smaller than 15 (Kimliksiz Hasta)
     Given Enter Kurum, Kurum detay
     When Select Kimliksiz Hasta from   Hasta Turu drop down menu on Hasta Kayit Page
     And Write a valid Cep Telefonu on Hasta Kayit Page
@@ -805,15 +805,15 @@ Feature: probel_hastaKayit
       | 15.08.2000 |
       | 15.08.1990 |
 
-  @TC0142
-  Scenario: TC0142  If something except Kendisi is selected, then Kart Sahibi box should be active (Kimliksiz Hasta)
+  @TC0244
+  Scenario: TC0244  If something except Kendisi is selected, then Kart Sahibi box should be active (Kimliksiz Hasta)
     Given Enter Kurum, Kurum detay
     When Select Kimliksiz Hasta from   Hasta Turu drop down menu on Hasta Kayit Page
     And Select Proximity from Yakinligi drop down menu on Hasta Kayit Page
     Then Kart Sahibi box should be active on Hasta Kayit Page when If something except Kendisi is selected
 
-  @TC0143
-  Scenario: TC0143 If Mavi Kartlilar is selected then patient resgistration should be done with a valid ID
+  @TC0258
+  Scenario: TC0258 If Mavi Kartlilar is selected then patient resgistration should be done with a valid ID
     Given Enter Kurum, Kurum detay
     When Select Mavi Kartlılar from   Hasta Turu drop down menu on Hasta Kayit Page
     And Write a valid Cep Telefonu on Hasta Kayit Page
@@ -828,8 +828,8 @@ Feature: probel_hastaKayit
       | 33241633218  |
       | 7724         |
 
-  @TC0080
-  Scenario:TC0080 Patient resgitration should be done with valid patient data
+  @TC0257
+  Scenario:TC0257 Patient resgitration should be done with valid patient data
     Given Enter Kurum, Kurum detay
     When Select Mavi Kartlılar from   Hasta Turu drop down menu on Hasta Kayit Page
     And Write a valid T.C. Kimlik No on Hasta Kayit Page
