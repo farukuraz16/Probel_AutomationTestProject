@@ -1,5 +1,6 @@
 @ServiceExaminationRegistration
 @PatientRegistration
+@Regression
 
 Feature: probel_hastaKayit
   Background:
@@ -346,8 +347,8 @@ Feature: probel_hastaKayit
     And  user breaks down the popup to the TAMAM button
 
 
-  @TC0064
-  Scenario: TC0064 - 13_17_99 Person Information data entry by Patient Type and nationality of countries other than Turkey
+  @TC0164 @US_001
+  Scenario: TC0164 - 13_17_99 Person Information data entry by Patient Type and nationality of countries other than Turkey
     Given Enter Kurum, Kurum detay
     And user selects the Uyruk
     And user click hasta Turu
@@ -361,7 +362,8 @@ Feature: probel_hastaKayit
     And user assert the registration
     And user click Islem Kapat button
     And user click Kayit Kapat button
-    And user select Gelis sekli
+    And user selects an poliklinik
+    And user selects the mode of arrival
     And user click Kaydet button
     And user click TAMAM button in the popup
     And user click Kaydet button
@@ -369,8 +371,8 @@ Feature: probel_hastaKayit
     And user registration verifies
 
 
-  @TC0064_D0025 @Bug
-  Scenario: TC0064 - D0025 - There is no such country as Seysel
+  @TC0164 @US_001 @Bug
+  Scenario: TC0164 - There is no such country as Seysel
     Given Enter Kurum, Kurum detay
     And user selects the Uyruk as Seysel
     And user click hasta Turu
@@ -384,16 +386,17 @@ Feature: probel_hastaKayit
     And user assert the registration
     And user click Islem Kapat button
     And user click Kayit Kapat button
-    And user select Gelis sekli
+    And user selects an poliklinik
+    And user selects the mode of arrival
     And user click Kaydet button
     And user click TAMAM button in the popup
     And user click Kaydet button
     And user close the message bilgiler kaydedildi
-    And user registration verifies
+    And user registration verifies for seysel
 
 
-  @TC0064_D0026 @Bug
-  Scenario:TC0064 - D0026 - In September 2018, Svaziland changed its name to Eswatini. Estawani not on the new list
+  @TC0164 @US_001 @Bug
+  Scenario:TC0164 - In September 2018, Svaziland changed its name to Eswatini. Estawani not on the new list
     Given Enter Kurum, Kurum detay
     And user selects the Uyruk as Svaziland
     And user click hasta Turu
@@ -407,17 +410,18 @@ Feature: probel_hastaKayit
     And user assert the registration
     And user click Islem Kapat button
     And user click Kayit Kapat button
-    And user select Gelis sekli
+    And user selects an poliklinik
+    And user selects the mode of arrival
     And user click Kaydet button
     And user click TAMAM button in the popup
     And user click Kaydet button
     And user close the message bilgiler kaydedildi
-    And user registration verifies
+    And user registration verifies for Svaziland
 
 
 
-  @TC0064_D0027 @Bug @Smoke
-  Scenario:TC0064 - D0027 - The Tahsis No ve Karne Seri No required for Syrian refugees, but also for Germany and Argentina
+  @TC0164 @US_001 @Bug @Smoke
+  Scenario:TC0164 - The Tahsis No ve Karne Seri No required for Syrian refugees, but also for Germany and Argentina
     Given Enter Kurum, Kurum detay
     And user selects the Uyruk as Almanya
     And user click hasta Turu
@@ -431,17 +435,18 @@ Feature: probel_hastaKayit
     And user assert the registration
     And user click Islem Kapat button
     And user click Kayit Kapat button
-    And user select Gelis sekli
+    And user selects an poliklinik
+    And user selects the mode of arrival
     And user click Kaydet button
     And user click TAMAM button in the popup
     And user click Kaydet button
     And user close the message bilgiler kaydedildi
-    And user registration verifies
+    And user registration verifies with tahsis no for Germany
 
 
 
-  @TC0064_D0024 @Bug
-  Scenario:TC0064 - D0024 - There is a meaningless country name in the country option under the Uyrugu
+  @TC0164 @US_001 @Bug
+  Scenario:TC0164 - The country option under Nationality has a meaningless country name like ??L?
     Given Enter Kurum, Kurum detay
     And user selects the Uyruk as ??L?
     And user click hasta Turu
@@ -455,17 +460,18 @@ Feature: probel_hastaKayit
     And user assert the registration
     And user click Islem Kapat button
     And user click Kayit Kapat button
-    And user select Gelis sekli
+    And user selects an poliklinik
+    And user selects the mode of arrival
     And user click Kaydet button
     And user click TAMAM button in the popup
     And user click Kaydet button
     And user close the message bilgiler kaydedildi
-    And user registration verifies
+    And user registration verifies for ??L?
 
 
 
-  @TC0065 @Bug
-  Scenario:TR0065 - data entry according to Patient Type 13_17_99 by clicking yeni dogan checkbox
+  @TC0165 @US_001 @Bug @Smoke
+  Scenario:TR0165 - Data cannot be entered according to Patient Type 17_99 by clicking on the newborn checkbox
     Given Enter Kurum, Kurum detay
     And user selects the Uyruk as arnavutluk
     And user click hasta Turu
@@ -478,23 +484,22 @@ Feature: probel_hastaKayit
     And user click newborn
     And user selects the date of birth newborn
     And user selects the date of birth mother
-    And user enters the TC number of mother
     And user enters the baby birthweek
     And user enters the baby birthday
+    And user enters the TC number of mother
     And user clicks on the save button
     And user assert issue message
 
 
-  @TC0069 @Bug
-  Scenario: TC0069 - D0028 - There is more than one of the same options in the "Basvuru sekli" drop-down box
+  @TC0163 @US_001 @Bug
+  Scenario: TC0163 - D0028 - There is more than one of the same options in the "Basvuru sekli" drop-down box
     Given Enter Kurum, Kurum detay
     And user click Basvuru sekli
     And user select Basvuru sekli
     And user assert that the options in the list are unique
 
-  @TC0073 @Bug
-  Scenario: TC0073 - when you first click on the phone textbox and then enter the institution information, the process gives a successful message
-    Given Enter Kurum, Kurum detay
+  @TC0167 @US_001 @Bug
+  Scenario: TC0167 - when you first click on the phone textbox and then enter the institution information, the process gives a successful message
     And user selects the Uyruk
     And user click hasta Turu
     And user select multeci kisiler
@@ -503,17 +508,9 @@ Feature: probel_hastaKayit
     And user writes Passport Id
     And user writes Passport No
     And user enters the mobile phone
-     # And Enter Kurum, Kurum detay
+    And Enter Kurum, Kurum detay
     And user clicks on the save button
-    And user assert the registration
-    And user click Islem Kapat button
-    And user click Kayit Kapat button
-    And user select Gelis sekli
-    And user click Kaydet button
-    And user click TAMAM button in the popup
-    And user click Kaydet button
-    And user close the message bilgiler kaydedildi
-    And user registration verifies
+    And user assert the islem basarili
 
 
   @TC0151

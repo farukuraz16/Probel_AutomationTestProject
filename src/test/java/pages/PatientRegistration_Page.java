@@ -454,6 +454,9 @@ public class PatientRegistration_Page {
     @FindBy(id = "TXT_HASTA_KAYIT_BEBEK_DOGUM_HAFTA_GUN")
     public WebElement bebekDogumGunu;
 
+    @FindBy(xpath = "//button[text()='bugün']")
+    public WebElement bebekDogumGunuBugun;
+
     @FindBy(id = "TXT_HASTA_KAYIT_TAHSIS_NO")
     public WebElement passportId;
 
@@ -477,6 +480,8 @@ public class PatientRegistration_Page {
         dogumTarihiSearchBox.sendKeys("17.05.2000" + Keys.ENTER);
 
     }
+
+
 
     public void clickCheckBox() {
         maviKartCheckBox.click();
