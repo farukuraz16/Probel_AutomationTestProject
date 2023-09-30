@@ -7,7 +7,7 @@ Feature: The Home Page of Service Register
     Given The user logs in
     And The user goes Hasta Islemleri, Ayaktan Hasta Islemleri and then click Poliklinik Muayene Kayit
 
-  @TC0200 @US_002 @Smoke
+  @TC0200 @US_002 @SmokeSample
   Scenario: TC0200 - The user can display the registered patient
     When insert the second TC Identity Number in TC ID box
     And press enter

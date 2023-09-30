@@ -17,20 +17,22 @@ public class Login_StepDefinitions {
     Actions actions = new Actions(Driver.getDriver());
 
 
-
-        @Given("The user logs in")
-        public void the_user_logs_in() {
+    @Given("The user logs in")
+    public void the_user_logs_in() {
 
         login_page.kullaniciKodu.sendKeys(ConfigReader.getProperty("userName"));
         login_page.sifre.sendKeys(ConfigReader.getProperty("password"));
         login_page.webSifre.sendKeys(ConfigReader.getProperty("web_password"));
         login_page.clickButton.click();
+        login_page.okeyButton.click();
 
-        }
-        @When("The user goes Hasta Islemleri, Ayaktan Hasta Islemleri and then click Poliklinik Muayene Kayit")
-        public void the_user_goes_hasta_islemleri_ayaktan_hasta_islemleri_and_then_click_poliklinik_muayene_kayit() {
-            ReusableMethods.jseWithClick(Driver.getDriver(), basePage.hastaIslemleri);
-            ReusableMethods.jseWithClick(Driver.getDriver(), basePage.ayaktanHastaIslemleri);
-            ReusableMethods.jseWithClick(Driver.getDriver(), basePage.poliklinikMuayneKayit);
-        }
+
+    }
+
+    @When("The user goes Hasta Islemleri, Ayaktan Hasta Islemleri and then click Poliklinik Muayene Kayit")
+    public void the_user_goes_hasta_islemleri_ayaktan_hasta_islemleri_and_then_click_poliklinik_muayene_kayit() {
+        ReusableMethods.jseWithClick(Driver.getDriver(), basePage.hastaIslemleri);
+        ReusableMethods.jseWithClick(Driver.getDriver(), basePage.ayaktanHastaIslemleri);
+        ReusableMethods.jseWithClick(Driver.getDriver(), basePage.poliklinikMuayneKayit);
+    }
 }
