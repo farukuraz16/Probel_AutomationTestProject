@@ -20,4 +20,7 @@ public class Login_Page {
 
     @FindBy(id ="btnLogin" )
     public WebElement clickButton;
+
+    @FindBy(xpath ="//span[text()='Tamam']" )
+    public WebElement okeyButton;
 }
